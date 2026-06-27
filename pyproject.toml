@@ -81,7 +81,10 @@ ignore = [
 # mypy — static types. Strict where it buys us safety on the public surface.
 # ----------------------------------------------------------------------------
 [tool.mypy]
-python_version = "3.11"
+# Target 3.12 so mypy can parse numpy's PEP 695 (`type` statement) stubs. The
+# package still supports 3.11+ at runtime — CI runs pytest on both 3.11 and 3.12,
+# and ruff's target-version=py311 guards against 3.12-only syntax in our code.
+python_version = "3.12"
 strict = true
 warn_unused_ignores = true
 warn_redundant_casts = true
