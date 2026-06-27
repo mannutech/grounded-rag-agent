@@ -1,8 +1,8 @@
 """Retrieval: chunking, dense + BM25 + hybrid retrieval, pluggable vector store.
 
-Depends only on ``grounded_rag.core``. The orchestrating retrievers
-(``DenseRetriever`` / ``HybridRetriever`` / ``build_retriever``) are added in the
-next commit; this module currently exposes the pure building blocks.
+Depends only on ``grounded_rag.core``. Public surface: the pure building blocks
+(chunker, cosine/BM25/fusion, in-memory store) plus the orchestrating retrievers
+and the ``build_index`` / ``build_retriever`` ingestion seam.
 """
 
 from __future__ import annotations
@@ -11,6 +11,14 @@ from grounded_rag.retrieval.bm25 import BM25Index
 from grounded_rag.retrieval.chunker import Chunker, chunk_document
 from grounded_rag.retrieval.embedder_iface import embed_text_for_chunk
 from grounded_rag.retrieval.fusion import reciprocal_rank_fusion, weighted_score_fusion
+from grounded_rag.retrieval.retriever import (
+    DenseRetriever,
+    HybridRetriever,
+    RetrievalIndex,
+    build_index,
+    build_retriever,
+    make_vector_store,
+)
 from grounded_rag.retrieval.store import (
     InMemoryVectorStore,
     VectorStore,
@@ -47,4 +55,11 @@ __all__ = [
     # fusion
     "reciprocal_rank_fusion",
     "weighted_score_fusion",
+    # orchestration + ingestion
+    "DenseRetriever",
+    "HybridRetriever",
+    "RetrievalIndex",
+    "build_index",
+    "build_retriever",
+    "make_vector_store",
 ]
