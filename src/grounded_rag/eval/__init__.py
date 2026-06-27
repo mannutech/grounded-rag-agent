@@ -7,6 +7,11 @@ and comparison matrix follow.
 
 from __future__ import annotations
 
+from grounded_rag.eval.comparison import (
+    DEFAULT_VARIANTS,
+    comparison_to_markdown,
+    run_comparison,
+)
 from grounded_rag.eval.judge import (
     JUDGE_RUBRIC,
     build_judge_prompt,
@@ -47,6 +52,10 @@ __all__ = [
     "write_report",
     "report_to_markdown",
     "REPORT_SCHEMA_VERSION",
+    # comparison
+    "run_comparison",
+    "comparison_to_markdown",
+    "DEFAULT_VARIANTS",
     "recall_at_k",
     "aggregate_recall",
     "correctness_from_verdicts",
