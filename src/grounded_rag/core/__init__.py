@@ -7,6 +7,17 @@ definitions; do not redefine these types elsewhere.
 
 from __future__ import annotations
 
+from grounded_rag.core.config import (
+    AgentConfig,
+    CoherePricing,
+    CohereSettings,
+    EvalConfig,
+    JudgeConfig,
+    RetrievalConfig,
+    Settings,
+    load_settings,
+    variant_to_overrides,
+)
 from grounded_rag.core.errors import (
     GoldParseError,
     GroundedRagError,
@@ -15,6 +26,7 @@ from grounded_rag.core.errors import (
     ToolError,
 )
 from grounded_rag.core.gitmeta import git_sha
+from grounded_rag.core.logging import configure_logging, get_logger
 from grounded_rag.core.types import (
     Agent,
     AgentResult,
@@ -55,6 +67,19 @@ __all__ = [
     "ToolError",
     # provenance
     "git_sha",
+    # config
+    "Settings",
+    "CohereSettings",
+    "CoherePricing",
+    "RetrievalConfig",
+    "AgentConfig",
+    "JudgeConfig",
+    "EvalConfig",
+    "load_settings",
+    "variant_to_overrides",
+    # logging
+    "configure_logging",
+    "get_logger",
     # enums
     "QueryType",
     "RetrievalMode",
