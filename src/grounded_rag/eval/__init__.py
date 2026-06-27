@@ -7,6 +7,12 @@ and comparison matrix follow.
 
 from __future__ import annotations
 
+from grounded_rag.eval.judge import (
+    JUDGE_RUBRIC,
+    build_judge_prompt,
+    judge,
+    parse_judge_response,
+)
 from grounded_rag.eval.metrics import (
     CostStats,
     LatencyStats,
@@ -24,6 +30,11 @@ from grounded_rag.eval.schema import load_gold
 
 __all__ = [
     "load_gold",
+    # judge
+    "judge",
+    "build_judge_prompt",
+    "parse_judge_response",
+    "JUDGE_RUBRIC",
     "recall_at_k",
     "aggregate_recall",
     "correctness_from_verdicts",
