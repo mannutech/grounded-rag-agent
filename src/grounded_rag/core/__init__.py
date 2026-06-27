@@ -27,6 +27,7 @@ from grounded_rag.core.errors import (
 )
 from grounded_rag.core.gitmeta import git_sha
 from grounded_rag.core.logging import configure_logging, get_logger
+from grounded_rag.core.pricing import estimate_cost, rerank_search_units
 from grounded_rag.core.types import (
     Agent,
     AgentResult,
@@ -80,6 +81,9 @@ __all__ = [
     # logging
     "configure_logging",
     "get_logger",
+    # pricing
+    "estimate_cost",
+    "rerank_search_units",
     # enums
     "QueryType",
     "RetrievalMode",
