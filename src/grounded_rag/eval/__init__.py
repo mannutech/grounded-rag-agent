@@ -26,6 +26,12 @@ from grounded_rag.eval.metrics import (
     recall_at_k,
     tool_call_efficiency,
 )
+from grounded_rag.eval.report import (
+    REPORT_SCHEMA_VERSION,
+    report_to_markdown,
+    write_report,
+)
+from grounded_rag.eval.runner import run_eval, run_single_query
 from grounded_rag.eval.schema import load_gold
 
 __all__ = [
@@ -35,6 +41,12 @@ __all__ = [
     "build_judge_prompt",
     "parse_judge_response",
     "JUDGE_RUBRIC",
+    # runner + report
+    "run_eval",
+    "run_single_query",
+    "write_report",
+    "report_to_markdown",
+    "REPORT_SCHEMA_VERSION",
     "recall_at_k",
     "aggregate_recall",
     "correctness_from_verdicts",
