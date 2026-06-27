@@ -1,16 +1,16 @@
 """Agent: bounded Cohere tool-use loop with grounded, cited, refusable answers.
 
-Depends on ``core`` and ``retrieval``. This commit lands the read-only tool
-registry, the safe calculator, the search_docs tool, input guarding, the system
-prompt, and cost accounting; citation mapping, the retriever adapter, and the
-loop itself follow in the next commits.
+Depends on ``core`` and ``retrieval``. ``run_agent`` is the free-function core;
+``RagAgent`` wraps it to satisfy the core ``Agent`` Protocol that eval depends on.
 """
 
 from __future__ import annotations
 
+from grounded_rag.agent.agent import RagAgent
 from grounded_rag.agent.citations import extract_citations
 from grounded_rag.agent.cost import price_query
 from grounded_rag.agent.guards import PROMPT_INJECTION_NOTE, GuardResult, guard_input
+from grounded_rag.agent.loop import default_registry, run_agent
 from grounded_rag.agent.prompts import (
     INSUFFICIENT_CONTEXT_SENTINEL,
     REFUSAL_TEXT,
@@ -23,20 +23,28 @@ from grounded_rag.agent.tools import ToolContext, ToolRegistry, ToolSpec
 from grounded_rag.agent.types import AgentRetriever
 
 __all__ = [
+    # loop + agent
+    "run_agent",
+    "RagAgent",
+    "default_registry",
+    # tools
     "ToolContext",
     "ToolRegistry",
     "ToolSpec",
-    "AgentRetriever",
-    "RetrieverAdapter",
-    "extract_citations",
     "make_calculator_tool",
     "make_search_docs_tool",
     "safe_calculate",
+    # retrieval + citations
+    "AgentRetriever",
+    "RetrieverAdapter",
+    "extract_citations",
+    # guards + prompts
     "guard_input",
     "GuardResult",
     "PROMPT_INJECTION_NOTE",
-    "price_query",
     "SYSTEM_PROMPT",
     "REFUSAL_TEXT",
     "INSUFFICIENT_CONTEXT_SENTINEL",
+    # cost
+    "price_query",
 ]
