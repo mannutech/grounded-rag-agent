@@ -27,7 +27,11 @@ def test_path_toggle_produces_a_different_index(client_embedder) -> None:  # typ
 
     chunks = _chunks()
     on_cfg = RetrievalConfig(
-        mode=RetrievalMode.DENSE, use_reranker=False, embed_file_path=True, top_k=10, rerank_top_n=10
+        mode=RetrievalMode.DENSE,
+        use_reranker=False,
+        embed_file_path=True,
+        top_k=10,
+        rerank_top_n=10,
     )
     off_cfg = on_cfg.model_copy(update={"embed_file_path": False})
 

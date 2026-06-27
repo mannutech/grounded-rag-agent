@@ -55,7 +55,7 @@ def weighted_score_fusion(
     sparse_weight = 1.0 - dense_weight
     combined: dict[int, float] = {}
     for idx in set(dense_norm) | set(sparse_norm):
-        combined[idx] = (
-            dense_weight * dense_norm.get(idx, 0.0) + sparse_weight * sparse_norm.get(idx, 0.0)
+        combined[idx] = dense_weight * dense_norm.get(idx, 0.0) + sparse_weight * sparse_norm.get(
+            idx, 0.0
         )
     return sorted(combined.items(), key=lambda item: (-item[1], item[0]))

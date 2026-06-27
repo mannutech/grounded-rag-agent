@@ -40,6 +40,6 @@ def test_cosine_top_k_k_larger_than_corpus() -> None:
 
 def test_cosine_top_k_degenerate_inputs() -> None:
     query = np.array([1.0, 0.0])
-    assert cosine_top_k(query, np.zeros((0, 2)), k=5) == []          # empty corpus
-    assert cosine_top_k(query, np.array([[1.0, 0.0]]), k=0) == []     # k == 0
+    assert cosine_top_k(query, np.zeros((0, 2)), k=5) == []  # empty corpus
+    assert cosine_top_k(query, np.array([[1.0, 0.0]]), k=0) == []  # k == 0
     assert cosine_top_k(np.array([0.0, 0.0]), np.array([[1.0, 0.0]]), k=1) == []  # zero query

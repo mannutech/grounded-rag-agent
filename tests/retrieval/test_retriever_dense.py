@@ -24,9 +24,7 @@ def _chunks(n: int) -> list[Chunk]:
 
 
 def test_dense_retrieve_shape_and_ordering(client_embedder) -> None:  # type: ignore[no-untyped-def]
-    config = RetrievalConfig(
-        mode=RetrievalMode.DENSE, use_reranker=False, top_k=10, rerank_top_n=3
-    )
+    config = RetrievalConfig(mode=RetrievalMode.DENSE, use_reranker=False, top_k=10, rerank_top_n=3)
     index = build_index(_chunks(6), client_embedder, config)
     retriever = build_retriever(config, index=index, embedder=client_embedder)
 

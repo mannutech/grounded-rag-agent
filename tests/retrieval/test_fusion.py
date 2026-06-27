@@ -40,8 +40,8 @@ def test_weighted_dense_weight_one_reproduces_dense_order() -> None:
 
 def test_weighted_normalises_each_list() -> None:
     # dense_weight 0.5: both lists min-max'd to [0,1] then averaged.
-    dense = [(0, 100.0), (1, 0.0)]   # -> {0:1.0, 1:0.0}
-    sparse = [(1, 10.0), (0, 0.0)]   # -> {1:1.0, 0:0.0}
+    dense = [(0, 100.0), (1, 0.0)]  # -> {0:1.0, 1:0.0}
+    sparse = [(1, 10.0), (0, 0.0)]  # -> {1:1.0, 0:0.0}
     fused = dict(weighted_score_fusion(dense, sparse, dense_weight=0.5))
     assert fused[0] == pytest.approx(0.5)
     assert fused[1] == pytest.approx(0.5)

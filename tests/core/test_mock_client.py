@@ -67,9 +67,7 @@ def test_embed_path_prepend_changes_vector() -> None:
 
 def test_rerank_default_is_sorted_descending_with_indices() -> None:
     client = MockCohereClient()
-    resp = client.rerank(
-        model="rerank-v3.5", query="q", documents=["d0", "d1", "d2"], top_n=2
-    )
+    resp = client.rerank(model="rerank-v3.5", query="q", documents=["d0", "d1", "d2"], top_n=2)
     assert [r.index for r in resp.results] == [0, 1]  # identity order, top_n=2
     scores = [r.relevance_score for r in resp.results]
     assert scores == sorted(scores, reverse=True)

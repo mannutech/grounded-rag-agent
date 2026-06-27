@@ -14,9 +14,9 @@ _C2 = "beta gamma neutral filler text"
 
 _VECTORS = {
     "zorptron": [1.0, 0.0, 0.0],  # the query vector
-    _C0: [1.0, 0.0, 0.0],          # dense-aligned distractor -> dense rank 0
-    _C2: [0.5, 0.5, 0.0],          # partial -> dense rank 1
-    _C1: [0.0, 0.0, 1.0],          # orthogonal -> dense rank 2 (last)
+    _C0: [1.0, 0.0, 0.0],  # dense-aligned distractor -> dense rank 0
+    _C2: [0.5, 0.5, 0.0],  # partial -> dense rank 1
+    _C1: [0.0, 0.0, 1.0],  # orthogonal -> dense rank 2 (last)
 }
 
 
@@ -57,7 +57,9 @@ def test_hybrid_lifts_lexical_match_that_dense_buries(make_static_embedder) -> N
     index = build_index(chunks, embedder, dense_cfg)
     dense_ids = [
         sc.chunk.chunk_id
-        for sc in build_retriever(dense_cfg, index=index, embedder=embedder).retrieve("zorptron").results
+        for sc in build_retriever(dense_cfg, index=index, embedder=embedder)
+        .retrieve("zorptron")
+        .results
     ]
 
     hybrid_cfg = _config(RetrievalMode.HYBRID)

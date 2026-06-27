@@ -61,7 +61,7 @@ class CoherePricing(BaseModel):
 class CohereSettings(BaseModel):
     """Cohere client + model selection + robustness knobs."""
 
-    api_key: str | None = None      # if None the wrapper falls back to CO_API_KEY
+    api_key: str | None = None  # if None the wrapper falls back to CO_API_KEY
     base_url: str | None = None
     embed_model: str = "embed-english-v3.0"
     rerank_model: str = "rerank-v3.5"
@@ -77,16 +77,16 @@ class RetrievalConfig(BaseModel):
     """Retrieval pipeline + the three evaluation A/B axes."""
 
     mode: RetrievalMode = RetrievalMode.HYBRID
-    use_reranker: bool = True        # rerank on/off A/B (maps RunVariant.rerank)
-    embed_file_path: bool = True     # path-embed on/off A/B (maps RunVariant.path_embedding)
-    top_k: int = 20                  # first-stage candidate count
-    rerank_top_n: int = 5            # FINAL context size (the agent reads THIS, not top_k)
+    use_reranker: bool = True  # rerank on/off A/B (maps RunVariant.rerank)
+    embed_file_path: bool = True  # path-embed on/off A/B (maps RunVariant.path_embedding)
+    top_k: int = 20  # first-stage candidate count
+    rerank_top_n: int = 5  # FINAL context size (the agent reads THIS, not top_k)
     fusion: FusionMethod = FusionMethod.RRF
-    rrf_k: int = 60                  # RRF damping constant
-    dense_weight: float = 0.5        # only used when fusion == WEIGHTED
+    rrf_k: int = 60  # RRF damping constant
+    dense_weight: float = 0.5  # only used when fusion == WEIGHTED
     chunk_tokens: int = 512
     chunk_overlap: int = 64
-    vector_store: str = "memory"     # "memory" | "chroma" | "pgvector"
+    vector_store: str = "memory"  # "memory" | "chroma" | "pgvector"
 
 
 class AgentConfig(BaseModel):
@@ -99,8 +99,8 @@ class AgentConfig(BaseModel):
     temperature: float = 0.0
     seed: int | None = 42
     max_steps: int = 6
-    min_citation_support: int = 1    # min resolvable citations before we trust an answer
-    min_rerank_score: float = 0.30   # weak-retrieval threshold -> refuse below it
+    min_citation_support: int = 1  # min resolvable citations before we trust an answer
+    min_rerank_score: float = 0.30  # weak-retrieval threshold -> refuse below it
     max_query_chars: int = 4000
     otel_enabled: bool = False
 
@@ -111,8 +111,8 @@ class JudgeConfig(BaseModel):
     n_votes: int = 3
     temperature: float = 0.0
     seed: int | None = 7
-    model_override: str | None = None   # defaults to cohere.generation_model
-    response_format_json: bool = True   # request response_format={"type": "json_object"}
+    model_override: str | None = None  # defaults to cohere.generation_model
+    response_format_json: bool = True  # request response_format={"type": "json_object"}
 
 
 class EvalConfig(BaseModel):
@@ -135,7 +135,7 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    mock_mode: bool = False          # force the MockCohereClient even if a key is present
+    mock_mode: bool = False  # force the MockCohereClient even if a key is present
     log_level: str = "INFO"
     log_json: bool = True
     cohere: CohereSettings = Field(default_factory=CohereSettings)
