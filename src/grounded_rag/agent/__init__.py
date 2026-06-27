@@ -8,6 +8,7 @@ loop itself follow in the next commits.
 
 from __future__ import annotations
 
+from grounded_rag.agent.citations import extract_citations
 from grounded_rag.agent.cost import price_query
 from grounded_rag.agent.guards import PROMPT_INJECTION_NOTE, GuardResult, guard_input
 from grounded_rag.agent.prompts import (
@@ -15,6 +16,7 @@ from grounded_rag.agent.prompts import (
     REFUSAL_TEXT,
     SYSTEM_PROMPT,
 )
+from grounded_rag.agent.retriever_adapter import RetrieverAdapter
 from grounded_rag.agent.tool_calculator import make_calculator_tool, safe_calculate
 from grounded_rag.agent.tool_search_docs import make_search_docs_tool
 from grounded_rag.agent.tools import ToolContext, ToolRegistry, ToolSpec
@@ -25,6 +27,8 @@ __all__ = [
     "ToolRegistry",
     "ToolSpec",
     "AgentRetriever",
+    "RetrieverAdapter",
+    "extract_citations",
     "make_calculator_tool",
     "make_search_docs_tool",
     "safe_calculate",
