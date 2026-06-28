@@ -155,6 +155,32 @@ keep) and run with the default vote count. The plumbing is the same; only the co
 changes. (Mock mode runs every table end-to-end offline but produces degenerate
 values — the offline mock neither retrieves nor judges like a real model.)
 
+### What the evaluation caught
+
+The harness isn't decoration — on one run it flagged a real **over-refusal** on the
+hardest case, `mh-sign-vs-rest`: *"What algorithm signs webhooks, and is that the
+same algorithm used to encrypt data at rest?"* The agent **refused** a question it
+should have answered, dropping correctness and refusal-accuracy to 0.917.
+
+Root cause (a configuration effect, not a model failure): that question needs facts
+from **two** docs at once — `webhooks.md` (HMAC-SHA256) and `security.md` (AES-256) —
+but `rerank_top_n` defaults to **5** while the demo corpus has **6** docs, so one doc
+is always cut. When the dropped doc is one of the two the question needs, the agent
+can't ground both halves and honestly refuses rather than half-answer. It's
+borderline: the same question answers perfectly (both docs cited) whenever both
+survive the cut.
+
+Two honest takeaways:
+
+- A single `ask` shows the *happy path* and looks flawless; only running the gold set
+  repeatedly reveals the system is ~92% reliable here with a specific weak spot. That
+  gap is the entire reason this project is evaluation-first.
+- The fix is a deliberate lever, not a silent default change: on a realistic corpus
+  top-5 is the *right* call, so the demo simply raises it
+  (`GRA_RETRIEVAL__RERANK_TOP_N=6`). The refusal itself is the grounded-over-
+  comprehensive tradeoff working as designed — now visible as a number you can decide
+  about.
+
 ## Project layout
 
 ```
