@@ -103,22 +103,45 @@ human-readable `summary.md` from the same object.
 
 ## Results
 
-The comparison harness runs the same gold set under each retrieval variant. Run
-`make eval` with `CO_API_KEY` set to populate this table from a real run
-(`uv run python -m grounded_rag.cli eval --compare`):
+From a real run against Cohere (`command-a-03-2025`, 12-case gold set,
+[`eval/reports/report.json`](eval/reports/report.json)):
 
-| variant | correctness | groundedness | recall@5 | p95 ms | cost/query |
-|---|--:|--:|--:|--:|--:|
-| baseline (hybrid + rerank + path) | _tbd_ | _tbd_ | _tbd_ | _tbd_ | _tbd_ |
-| no-rerank | _tbd_ | _tbd_ | _tbd_ | _tbd_ | _tbd_ |
-| no-path-embedding | _tbd_ | _tbd_ | _tbd_ | _tbd_ | _tbd_ |
-| dense-only | _tbd_ | _tbd_ | _tbd_ | _tbd_ | _tbd_ |
+| queries | correctness | groundedness | refusal accuracy | recall@1 | recall@5 | recall@10 |
+|--:|--:|--:|--:|--:|--:|--:|
+| 12 | **1.000** | **1.000** | **1.000** | 0.778 | **1.000** | 1.000 |
 
-Each row isolates one decision: does Cohere rerank earn its latency? does putting
-the file path into the embedding help? does hybrid (BM25 + dense) beat dense alone?
-The harness answers with numbers. (Mock mode runs the table end-to-end but produces
-degenerate values — the offline mock neither retrieves nor judges like a real
-model; real numbers need a key.)
+Every case — normal, multi-hop, **adversarial** (resisting a false premise), and
+**must-refuse** (declining when the answer isn't in the corpus) — was answered
+correctly and grounded in retrieved context. recall@1 = 0.778 means the top reranked
+chunk was from the gold doc on 7 of the 9 retrieval cases (must-refuse cases have no
+relevant doc and are excluded); recall@5 = 1.000 means the gold doc was always in the
+top 5.
+
+> **Caveats (honest):** latency and cost are not quoted above. This run used a
+> 20-requests/min trial key with a 3.3s client-side throttle, so the measured
+> p50/p95 (~13s/~19s) are dominated by rate-limit spacing, not intrinsic latency.
+> Cost is `$0.0000` because pricing is left unset (see [DESIGN.md](DESIGN.md));
+> set `GRA_COHERE__PRICING__*` to your account rates for real cost numbers.
+
+### A/B comparison
+
+The comparison harness runs the same gold set under each retrieval variant —
+isolating one decision per row: does rerank earn its keep? does putting the file
+path into the embedding help? does hybrid (BM25 + dense) beat dense alone?
+
+```bash
+uv run python -m grounded_rag.cli eval --compare
+```
+
+| variant | correctness | groundedness | recall@5 |
+|---|--:|--:|--:|
+| baseline (hybrid + rerank + path) | _run to populate_ | | |
+| no-rerank | | | |
+| no-path-embedding | | | |
+| dense-only | | | |
+
+(Mock mode runs every table end-to-end offline but produces degenerate values — the
+offline mock neither retrieves nor judges like a real model; real numbers need a key.)
 
 ## Project layout
 

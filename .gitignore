@@ -45,3 +45,7 @@ eval/reports/_local/
 .idea/
 .vscode/
 *.swp
+
+# transient CLI run outputs
+eval/reports/*.out
+eval/reports/*.err
