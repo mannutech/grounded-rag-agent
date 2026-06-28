@@ -94,6 +94,33 @@ def test_wrapper_is_not_mock() -> None:
     assert _wrapper(_Flaky(fail_times=0, exc=ValueError, result="x")).is_mock is False
 
 
+def test_min_request_interval_throttles() -> None:
+    class _Clock:
+        def __init__(self) -> None:
+            self.t = 0.0
+
+        def __call__(self) -> float:
+            return self.t
+
+    clock = _Clock()
+    sleeps: list[float] = []
+
+    def sleep(seconds: float) -> None:
+        sleeps.append(seconds)
+        clock.t += seconds  # sleeping advances time
+
+    flaky = _Flaky(fail_times=0, exc=ValueError, result="ok")
+    wrapper = CohereClientWrapper(
+        settings=CohereSettings(min_request_interval_s=3.0, max_retries=0),
+        client=flaky,
+        sleep=sleep,
+        monotonic=clock,
+    )
+    wrapper.chat(model="m", messages=[])  # first call: no wait
+    wrapper.chat(model="m", messages=[])  # second call: must wait the full interval
+    assert sleeps == [3.0]
+
+
 # -- client factory ---------------------------------------------------------
 
 

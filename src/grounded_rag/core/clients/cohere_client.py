@@ -66,13 +66,27 @@ class CohereClientWrapper:
         client: Any | None = None,
         is_retryable: Callable[[BaseException], bool] = default_is_retryable,
         sleep: Callable[[float], None] = time.sleep,
+        monotonic: Callable[[], float] = time.monotonic,
     ) -> None:
         self._settings = settings
         self._is_retryable = is_retryable
         self._sleep = sleep
+        self._monotonic = monotonic
+        self._last_call_at: float | None = None
         if client is None:
             client = self._build_sdk_client(settings)
         self._client = client
+
+    def _throttle(self) -> None:
+        """Sleep to keep at least ``min_request_interval_s`` between calls."""
+        interval = self._settings.min_request_interval_s
+        if interval <= 0:
+            return
+        if self._last_call_at is not None:
+            elapsed = self._monotonic() - self._last_call_at
+            if elapsed < interval:
+                self._sleep(interval - elapsed)
+        self._last_call_at = self._monotonic()
 
     @staticmethod
     def _build_sdk_client(settings: CohereSettings) -> Any:
@@ -91,6 +105,7 @@ class CohereClientWrapper:
         delay = self._settings.backoff_base_s
         last_exc: BaseException | None = None
         for attempt in range(self._settings.max_retries + 1):
+            self._throttle()
             try:
                 return fn(**kwargs)
             except Exception as exc:

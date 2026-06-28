@@ -70,6 +70,10 @@ class CohereSettings(BaseModel):
     max_retries: int = 3
     backoff_base_s: float = 0.5
     backoff_max_s: float = 8.0
+    # Proactive client-side throttle: minimum seconds between API calls. 0 disables.
+    # Set this to respect a key's rate limit instead of relying only on 429 retries
+    # (e.g. a 20-calls/min trial key -> ~3.2).
+    min_request_interval_s: float = 0.0
     pricing: CoherePricing = Field(default_factory=CoherePricing)
 
 
