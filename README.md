@@ -133,15 +133,27 @@ path into the embedding help? does hybrid (BM25 + dense) beat dense alone?
 uv run python -m grounded_rag.cli eval --compare
 ```
 
+Real run (`command-a-03-2025`, `eval/reports/comparison.md`):
+
 | variant | correctness | groundedness | recall@5 |
 |---|--:|--:|--:|
-| baseline (hybrid + rerank + path) | _run to populate_ | | |
-| no-rerank | | | |
-| no-path-embedding | | | |
-| dense-only | | | |
+| baseline (hybrid + rerank + path) | 0.917 | 1.000 | 1.000 |
+| no-rerank | 1.000 | 1.000 | 1.000 |
+| no-path-embedding | 1.000 | 1.000 | 1.000 |
+| dense-only | 1.000 | 1.000 | 1.000 |
 
-(Mock mode runs every table end-to-end offline but produces degenerate values — the
-offline mock neither retrieves nor judges like a real model; real numbers need a key.)
+**What this honestly shows.** On a clean 6-document corpus, **recall@5 saturates at
+1.000 for every variant** — retrieval is easy enough that all four configs always
+surface the gold doc in the top 5, so the A/B is *indistinguishable on recall here*.
+That's a real null result, reported as-is rather than dressed up. The correctness
+spread (0.917 vs 1.000) is within **single-vote judge noise**: this comparison ran
+with `n_votes=1` to fit the trial key's 20-req/min limit, and the same baseline
+config scored 1.000 in the headline run above — which is precisely why the judge
+defaults to `n_votes=3` majority voting. To make the variants actually separate,
+point the harness at a larger, noisier corpus (where rerank and hybrid earn their
+keep) and run with the default vote count. The plumbing is the same; only the corpus
+changes. (Mock mode runs every table end-to-end offline but produces degenerate
+values — the offline mock neither retrieves nor judges like a real model.)
 
 ## Project layout
 
