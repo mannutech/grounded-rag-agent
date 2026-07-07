@@ -161,6 +161,35 @@ keep) and run with the default vote count. The plumbing is the same; only the co
 changes. (Mock mode runs every table end-to-end offline but produces degenerate
 values — the offline mock neither retrieves nor judges like a real model.)
 
+### Retrieval quality on a large corpus (SQuAD, offline)
+
+The toy corpus above saturates recall. To measure retrieval where it actually
+varies, the harness includes a **retrieval-only** evaluator (deterministic
+recall@k + MRR against labeled relevant docs — no LLM, no judge) and a builder that
+turns **SQuAD 2.0** into a 150-document corpus with 180 real questions
+(`scripts/build_squad.py`). It runs **fully offline**: BM25 is pure computation and
+the dense side uses a local `model2vec` embedder (no torch, no key).
+
+```bash
+uv run --extra local python -m grounded_rag.cli \
+  --docs data/squad/docs.jsonl retrieval-eval --gold data/squad/gold.jsonl --compare --embedder local
+```
+
+Real result (150 questions, offline):
+
+| method | recall@1 | recall@5 | recall@10 | MRR |
+|---|--:|--:|--:|--:|
+| BM25 (sparse) | **0.900** | 0.980 | 0.987 | **0.934** |
+| dense (local) | 0.793 | 0.967 | 0.993 | 0.873 |
+| hybrid (RRF) | 0.833 | 0.993 | **1.000** | 0.908 |
+
+Now the methods are **distinguishable**. BM25 wins rank-1 and MRR (SQuAD questions
+overlap lexically with their source paragraph); hybrid wins coverage (recall@10 =
+1.000). And the two are genuinely complementary — BM25 finds 20 rank-1 hits dense
+misses, dense finds 4 BM25 misses, so their union is correct 139/150 times at rank-1
+— which is exactly why fusion helps. A live Cohere `embed-v3` embedder (drop the
+`--embedder local` flag with a key) would raise the dense/hybrid numbers further.
+
 ### What the evaluation caught
 
 The harness isn't decoration — on one run it flagged a real **over-refusal** on the
