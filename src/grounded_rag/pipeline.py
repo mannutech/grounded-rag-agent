@@ -7,6 +7,7 @@ of "build the system from the docs on disk".
 
 from __future__ import annotations
 
+import json
 from collections.abc import Callable
 from pathlib import Path
 
@@ -22,25 +23,43 @@ from grounded_rag.retrieval.retriever import build_index, build_retriever
 _DOC_SUFFIXES = {".md", ".txt"}
 
 
-def load_corpus(docs_dir: str | Path, settings: Settings) -> list[Chunk]:
-    """Read and chunk every ``.md`` / ``.txt`` document under ``docs_dir``.
+def _chunk_doc(doc_id: str, file_path: str, text: str, settings: Settings) -> list[Chunk]:
+    return chunk_document(
+        doc_id=doc_id,
+        file_path=file_path,
+        text=text,
+        chunk_tokens=settings.retrieval.chunk_tokens,
+        overlap=settings.retrieval.chunk_overlap,
+    )
 
-    ``doc_id`` is the file stem (so gold ``relevant_doc_ids`` read naturally);
-    ``file_path`` is the path as given (used by the path-in-embedding toggle).
+
+def load_corpus(docs_dir: str | Path, settings: Settings) -> list[Chunk]:
+    """Load and chunk a corpus.
+
+    ``docs_dir`` may be a directory of ``.md`` / ``.txt`` files (``doc_id`` = file
+    stem) or a single ``.jsonl`` file with one ``{"doc_id", "text"}`` per line
+    (the format used for large corpora like the SQuAD dataset).
     """
-    directory = Path(docs_dir)
+    path = Path(docs_dir)
+    if path.suffix.lower() == ".jsonl":
+        return _load_jsonl_corpus(path, settings)
     chunks: list[Chunk] = []
-    for path in sorted(directory.rglob("*")):
-        if path.suffix.lower() not in _DOC_SUFFIXES:
+    for file in sorted(path.rglob("*")):
+        if file.suffix.lower() not in _DOC_SUFFIXES:
             continue
+        chunks.extend(_chunk_doc(file.stem, str(file), file.read_text(encoding="utf-8"), settings))
+    return chunks
+
+
+def _load_jsonl_corpus(path: Path, settings: Settings) -> list[Chunk]:
+    chunks: list[Chunk] = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        record = json.loads(line)
         chunks.extend(
-            chunk_document(
-                doc_id=path.stem,
-                file_path=str(path),
-                text=path.read_text(encoding="utf-8"),
-                chunk_tokens=settings.retrieval.chunk_tokens,
-                overlap=settings.retrieval.chunk_overlap,
-            )
+            _chunk_doc(record["doc_id"], record.get("source", str(path)), record["text"], settings)
         )
     return chunks
 

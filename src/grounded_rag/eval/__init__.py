@@ -29,12 +29,18 @@ from grounded_rag.eval.metrics import (
     groundedness_score,
     latency_percentiles,
     recall_at_k,
+    reciprocal_rank,
     tool_call_efficiency,
 )
 from grounded_rag.eval.report import (
     REPORT_SCHEMA_VERSION,
     report_to_markdown,
     write_report,
+)
+from grounded_rag.eval.retrieval import (
+    RetrievalReport,
+    evaluate_retrieval,
+    retrieval_report_to_markdown,
 )
 from grounded_rag.eval.runner import run_eval, run_single_query
 from grounded_rag.eval.schema import load_gold
@@ -56,6 +62,11 @@ __all__ = [
     "run_comparison",
     "comparison_to_markdown",
     "DEFAULT_VARIANTS",
+    # retrieval-only eval
+    "evaluate_retrieval",
+    "retrieval_report_to_markdown",
+    "RetrievalReport",
+    "reciprocal_rank",
     "recall_at_k",
     "aggregate_recall",
     "correctness_from_verdicts",

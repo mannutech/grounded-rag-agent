@@ -24,6 +24,7 @@ __all__ = [
     "CostStats",
     "recall_at_k",
     "aggregate_recall",
+    "reciprocal_rank",
     "correctness_from_verdicts",
     "groundedness_score",
     "latency_percentiles",
@@ -71,6 +72,15 @@ def aggregate_recall(values: list[float | None]) -> float | None:
     if not present:
         return None
     return sum(present) / len(present)
+
+
+def reciprocal_rank(relevant: list[str], retrieved: list[str]) -> float:
+    """1 / (rank of the first relevant doc), or 0.0 if none retrieved. Mean -> MRR."""
+    relevant_set = set(relevant)
+    for i, doc_id in enumerate(retrieved):
+        if doc_id in relevant_set:
+            return 1.0 / (i + 1)
+    return 0.0
 
 
 def correctness_from_verdicts(verdicts: list[Verdict]) -> float:

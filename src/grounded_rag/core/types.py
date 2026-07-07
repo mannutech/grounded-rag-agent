@@ -41,6 +41,7 @@ class RetrievalMode(StrEnum):
 
     DENSE = "dense"
     HYBRID = "hybrid"
+    SPARSE = "sparse"  # BM25-only (no embeddings — runs with no API/model)
 
 
 class FusionMethod(StrEnum):

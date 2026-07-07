@@ -206,7 +206,9 @@ def run_agent(
         answer=REFUSAL_TEXT if refused else (final_text or REFUSAL_TEXT),
         refused=refused,
         citations=citations,
-        retrieved=list(ctx.ledger.values()),
+        # ordered by relevance (best rerank score first) so recall@k reflects rank,
+        # not the order chunks happened to be surfaced across search_docs calls.
+        retrieved=sorted(ctx.ledger.values(), key=lambda c: -c.score),
         tool_calls=tool_records,
         usage=usage,
         cost_usd=price_query(usage, pricing),

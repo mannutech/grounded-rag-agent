@@ -8,14 +8,20 @@ from __future__ import annotations
 
 import argparse
 import sys
+from pathlib import Path
 
 from grounded_rag.core.clients.cohere_client import build_client
+from grounded_rag.core.clients.embedder import CohereEmbedder
 from grounded_rag.core.config import Settings, load_settings
 from grounded_rag.core.logging import configure_logging
+from grounded_rag.core.types import RetrievalMode
 from grounded_rag.eval.comparison import DEFAULT_VARIANTS, comparison_to_markdown, run_comparison
 from grounded_rag.eval.report import report_to_markdown, write_report
+from grounded_rag.eval.retrieval import evaluate_retrieval, retrieval_report_to_markdown
 from grounded_rag.eval.runner import run_eval
+from grounded_rag.eval.schema import load_gold
 from grounded_rag.pipeline import build_agent, load_corpus, make_agent_factory
+from grounded_rag.retrieval.retriever import build_index, build_retriever
 
 _DOCS_DIR = "data/docs"
 
@@ -31,7 +37,42 @@ def _build_parser() -> argparse.ArgumentParser:
     ask.add_argument("question", help="the question to answer")
     ev = sub.add_parser("eval", help="run the evaluation harness")
     ev.add_argument("--compare", action="store_true", help="run the variant comparison matrix")
+    rv = sub.add_parser(
+        "retrieval-eval", help="score retrieval only (recall@k + MRR); no LLM/judge"
+    )
+    rv.add_argument("--gold", default=None, help="gold JSONL (default: eval config)")
+    rv.add_argument(
+        "--compare", action="store_true", help="compare sparse vs dense vs hybrid retrieval"
+    )
     return parser
+
+
+def _cmd_retrieval_eval(settings: Settings, docs: str, gold_path: str | None, compare: bool) -> int:
+    client = build_client(settings)
+    embedder = CohereEmbedder(client, model=settings.cohere.embed_model)
+    gold = load_gold(gold_path or settings.eval.gold_path)
+    chunks = load_corpus(docs, settings)
+    modes = (
+        [RetrievalMode.SPARSE, RetrievalMode.DENSE, RetrievalMode.HYBRID]
+        if compare
+        else [settings.retrieval.mode]
+    )
+    out_dir = Path(settings.eval.out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    rows = ["| method | n | recall@k | MRR |", "|---|--:|---|--:|"]
+    for mode in modes:
+        cfg = settings.retrieval.model_copy(update={"mode": mode, "use_reranker": False})
+        index = build_index(chunks, embedder, cfg)
+        retriever = build_retriever(cfg, index=index, embedder=embedder, reranker=None)
+        report = evaluate_retrieval(gold, retriever, settings.eval.k_values)
+        (out_dir / f"retrieval_{mode.value}.json").write_text(
+            report.model_dump_json(indent=2), encoding="utf-8"
+        )
+        rows.append(retrieval_report_to_markdown(report, label=mode.value))
+    print("\n".join(rows))
+    print(f"\n(reports written to {out_dir}/retrieval_*.json)")
+    return 0
 
 
 def _cmd_ingest(settings: Settings, docs: str) -> int:
@@ -88,6 +129,8 @@ def main(argv: list[str] | None = None) -> int:
         return _cmd_ask(settings, args.docs, args.question)
     if args.command == "eval":
         return _cmd_eval(settings, args.docs, args.compare)
+    if args.command == "retrieval-eval":
+        return _cmd_retrieval_eval(settings, args.docs, args.gold, args.compare)
     return 1
 
 

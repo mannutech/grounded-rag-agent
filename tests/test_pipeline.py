@@ -33,6 +33,17 @@ def test_load_corpus_reads_docs() -> None:
     assert all(c.file_path.endswith(".md") for c in chunks)
 
 
+def test_load_jsonl_corpus(tmp_path: Path) -> None:
+    jsonl = tmp_path / "docs.jsonl"
+    jsonl.write_text(
+        '{"doc_id": "a", "text": "alpha content here"}\n'
+        '{"doc_id": "b", "text": "beta content here"}\n',
+        encoding="utf-8",
+    )
+    chunks = load_corpus(jsonl, _settings())
+    assert {c.doc_id for c in chunks} == {"a", "b"}
+
+
 def test_hybrid_retrieval_surfaces_lexical_match() -> None:
     settings = _settings()
     chunks = load_corpus(_DOCS, settings)

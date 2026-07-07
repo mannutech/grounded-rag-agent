@@ -28,6 +28,14 @@ def test_cohere_embedder_translation() -> None:
     assert query == docs[0]  # same text -> same deterministic vector
 
 
+def test_cohere_embedder_batches_over_96() -> None:
+    client = MockCohereClient(embed_dim=8)
+    embedder = CohereEmbedder(client, dim=8)
+    vectors = embedder.embed_documents([f"doc {i}" for i in range(220)])
+    assert len(vectors) == 220
+    assert client.call_counts["embed"] == 3  # ceil(220 / 96)
+
+
 def test_cohere_reranker_translation() -> None:
     reranker = CohereReranker(MockCohereClient())
     pairs = reranker.rerank(query="q", documents=["d0", "d1", "d2"], top_n=2)

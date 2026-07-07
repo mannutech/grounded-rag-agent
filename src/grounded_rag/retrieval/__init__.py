@@ -15,6 +15,7 @@ from grounded_rag.retrieval.retriever import (
     DenseRetriever,
     HybridRetriever,
     RetrievalIndex,
+    SparseRetriever,
     build_index,
     build_retriever,
     make_vector_store,
@@ -58,6 +59,7 @@ __all__ = [
     # orchestration + ingestion
     "DenseRetriever",
     "HybridRetriever",
+    "SparseRetriever",
     "RetrievalIndex",
     "build_index",
     "build_retriever",
