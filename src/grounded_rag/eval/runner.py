@@ -14,6 +14,7 @@ from typing import Any
 
 from grounded_rag.core.config import Settings
 from grounded_rag.core.gitmeta import git_sha
+from grounded_rag.core.providers import ChatCompletion, ChatProvider, build_chat_provider
 from grounded_rag.core.types import (
     Agent,
     CohereClient,
@@ -36,33 +37,44 @@ from grounded_rag.eval.report import REPORT_SCHEMA_VERSION
 from grounded_rag.eval.schema import load_gold
 
 
-def _safe_int(value: Any) -> int:
-    return int(value) if isinstance(value, (int, float)) else 0
+class _UsageCountingProvider:
+    """Wraps a ChatProvider, summing judge token usage (to isolate judge cost)."""
 
-
-class _UsageCountingClient:
-    """Wraps a client, summing chat token usage (used to isolate judge cost)."""
-
-    def __init__(self, inner: CohereClient) -> None:
+    def __init__(self, inner: ChatProvider) -> None:
         self._inner = inner
-        self.is_mock = getattr(inner, "is_mock", False)
+        self.name = getattr(inner, "name", "unknown")
+        self.model = getattr(inner, "model", "unknown")
         self._input = 0
         self._output = 0
 
-    def chat(self, **kwargs: Any) -> Any:
-        resp = self._inner.chat(**kwargs)
-        self._input += _safe_int(getattr(resp.usage.tokens, "input_tokens", 0))
-        self._output += _safe_int(getattr(resp.usage.tokens, "output_tokens", 0))
-        return resp
-
-    def embed(self, **kwargs: Any) -> Any:
-        return self._inner.embed(**kwargs)
-
-    def rerank(self, **kwargs: Any) -> Any:
-        return self._inner.rerank(**kwargs)
+    def complete(
+        self,
+        *,
+        messages: list[dict[str, Any]],
+        temperature: float = 0.0,
+        seed: int | None = None,
+        response_format: dict[str, Any] | None = None,
+    ) -> ChatCompletion:
+        completion = self._inner.complete(
+            messages=messages, temperature=temperature, seed=seed, response_format=response_format
+        )
+        self._input += completion.usage.input_tokens
+        self._output += completion.usage.output_tokens
+        return completion
 
     def usage(self) -> TokenUsage:
         return TokenUsage(input_tokens=self._input, output_tokens=self._output)
+
+
+def _build_judge_provider(settings: Settings, client: CohereClient) -> _UsageCountingProvider:
+    """Build the judge's chat provider from config (cohere reuses the agent's client)."""
+    model = settings.judge.model_override
+    if model is None and settings.judge.provider == "cohere":
+        model = settings.cohere.generation_model
+    provider = build_chat_provider(
+        settings.judge.provider, model, cohere_client=client, api_key=settings.judge.api_key
+    )
+    return _UsageCountingProvider(provider)
 
 
 def run_single_query(
@@ -71,13 +83,11 @@ def run_single_query(
     """Run the agent and judge on one gold record."""
     result = agent.answer(record.question)
 
-    counting = _UsageCountingClient(client)
-    judge_model = settings.judge.model_override or settings.cohere.generation_model
+    counting = _build_judge_provider(settings, client)
     verdict = judge(
         record,
         result,
-        client=counting,
-        model=judge_model,
+        provider=counting,
         n_votes=settings.judge.n_votes,
         temperature=settings.judge.temperature,
         seed=settings.judge.seed,

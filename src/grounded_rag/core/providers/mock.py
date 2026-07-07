@@ -21,6 +21,7 @@ class MockChatProvider:
         self,
         *,
         text: str = "{}",
+        texts: list[str] | None = None,
         router: TextRouter | None = None,
         model: str = "mock-model",
         input_tokens: int = 10,
@@ -28,10 +29,18 @@ class MockChatProvider:
     ) -> None:
         self.model = model
         self._text = text
+        self._texts = texts  # served in order across calls (repeats the last when exhausted)
         self._router = router
         self._input = input_tokens
         self._output = output_tokens
         self.calls = 0
+
+    def _next_text(self, messages: list[dict[str, Any]]) -> str:
+        if self._router is not None:
+            return self._router(messages)
+        if self._texts is not None:
+            return self._texts[min(self.calls - 1, len(self._texts) - 1)]
+        return self._text
 
     def complete(
         self,
@@ -42,7 +51,7 @@ class MockChatProvider:
         response_format: dict[str, Any] | None = None,
     ) -> ChatCompletion:
         self.calls += 1
-        text = self._router(messages) if self._router is not None else self._text
+        text = self._next_text(messages)
         return ChatCompletion(
             text=text,
             usage=TokenUsage(input_tokens=self._input, output_tokens=self._output),

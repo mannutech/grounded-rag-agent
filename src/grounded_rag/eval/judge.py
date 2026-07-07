@@ -16,6 +16,7 @@ import re
 from typing import Any
 
 from grounded_rag.core.errors import JudgeParseError
+from grounded_rag.core.providers import ChatProvider
 from grounded_rag.core.types import AgentResult, GoldRecord, JudgeBallot, QueryType, Verdict
 
 JUDGE_RUBRIC = """You are a strict evaluator of a retrieval-augmented answer. Apply these criteria:
@@ -118,14 +119,6 @@ def parse_judge_response(raw: str) -> JudgeBallot:
         raise JudgeParseError(f"judge output failed validation: {exc}") from exc
 
 
-def _response_text(response: Any) -> str:
-    content = getattr(response.message, "content", None)
-    if not content:
-        return ""
-    text = getattr(content[0], "text", "")
-    return text if isinstance(text, str) else ""
-
-
 def _majority(values: list[bool]) -> tuple[bool, float]:
     """Majority vote (ties -> True) plus the winning-margin fraction."""
     n = len(values)
@@ -142,8 +135,7 @@ def _keypoint_recall(record: GoldRecord, ballot: JudgeBallot) -> float:
 
 
 def _one_vote(
-    client: Any,
-    model: str,
+    provider: ChatProvider,
     messages: list[dict[str, Any]],
     temperature: float,
     seed: int | None,
@@ -151,25 +143,20 @@ def _one_vote(
 ) -> JudgeBallot | None:
     """A single judge call; one stricter retry on parse failure, else abstain."""
     try:
-        resp = client.chat(
-            model=model,
-            messages=messages,
-            temperature=temperature,
-            seed=seed,
-            response_format=response_format,
+        completion = provider.complete(
+            messages=messages, temperature=temperature, seed=seed, response_format=response_format
         )
-        return parse_judge_response(_response_text(resp))
+        return parse_judge_response(completion.text)
     except JudgeParseError:
         stricter = [*messages, {"role": "user", "content": "Return ONLY the JSON object."}]
         try:
-            resp = client.chat(
-                model=model,
+            completion = provider.complete(
                 messages=stricter,
                 temperature=temperature,
                 seed=seed,
                 response_format=response_format,
             )
-            return parse_judge_response(_response_text(resp))
+            return parse_judge_response(completion.text)
         except JudgeParseError:
             return None
 
@@ -178,20 +165,24 @@ def judge(
     record: GoldRecord,
     result: AgentResult,
     *,
-    client: Any,
-    model: str = "command-a-03-2025",
+    provider: ChatProvider,
     n_votes: int = 3,
     temperature: float = 0.0,
     seed: int | None = 7,
     response_format_json: bool = True,
 ) -> Verdict:
-    """Evaluate ``result`` against ``record`` via an N-vote majority of judge ballots."""
+    """Evaluate ``result`` against ``record`` via an N-vote majority of judge ballots.
+
+    ``provider`` is any :class:`ChatProvider` — using a *different* model family than
+    the system under test (e.g. GPT-4o or Claude judging a Cohere agent) is how the
+    harness guards against same-family self-preference bias.
+    """
     messages = build_judge_prompt(record, result)
     response_format = {"type": "json_object"} if response_format_json else None
     ballots: list[JudgeBallot] = []
     for i in range(n_votes):
         vote_seed = seed + i if seed is not None else None
-        ballot = _one_vote(client, model, messages, temperature, vote_seed, response_format)
+        ballot = _one_vote(provider, messages, temperature, vote_seed, response_format)
         if ballot is not None:
             ballots.append(ballot)
     return _aggregate(record, ballots)

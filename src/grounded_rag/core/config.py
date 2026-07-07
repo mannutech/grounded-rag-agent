@@ -112,10 +112,13 @@ class AgentConfig(BaseModel):
 class JudgeConfig(BaseModel):
     """LLM-as-judge params; variance reduced via temperature 0 + fixed seed + votes."""
 
+    provider: str = "cohere"  # cohere | openai | anthropic — use a DIFFERENT family than the
+    #                           agent to avoid same-model self-preference bias
+    model_override: str | None = None  # defaults to the provider's default model
+    api_key: str | None = None  # for openai/anthropic; falls back to their standard env var
     n_votes: int = 3
     temperature: float = 0.0
     seed: int | None = 7
-    model_override: str | None = None  # defaults to cohere.generation_model
     response_format_json: bool = True  # request response_format={"type": "json_object"}
 
 

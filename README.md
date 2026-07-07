@@ -97,6 +97,12 @@ appropriateness), low temperature, a seed varied per vote, and an N-vote majorit
 whose winning margin is reported as `agreement`. Judge output is parsed defensively
 and abstains rather than crashing on a bad response.
 
+**Cross-family judging.** The judge runs through a provider-agnostic `ChatProvider`
+(Cohere · OpenAI · Anthropic behind one adapter Protocol), so you can grade the
+Cohere agent with a *different* model family — `GRA_JUDGE__PROVIDER=openai` or
+`anthropic` — to guard against same-model self-preference bias. (Retrieval stays on
+Cohere; OpenAI/Anthropic SDKs are optional extras, lazy-imported.)
+
 **Reproducible reports.** Every run writes a versioned, self-describing
 `report.json` (schema version, git sha, seed, mock flag, config snapshot) and a
 human-readable `summary.md` from the same object.

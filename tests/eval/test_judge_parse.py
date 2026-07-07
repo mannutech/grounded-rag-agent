@@ -6,8 +6,8 @@ import json
 
 import pytest
 
-from grounded_rag.core.clients.mock import ScriptedCohereClient, chat_text
 from grounded_rag.core.errors import JudgeParseError
+from grounded_rag.core.providers import MockChatProvider
 from grounded_rag.core.types import (
     AgentResult,
     AgentRunTrace,
@@ -108,14 +108,8 @@ def _result() -> AgentResult:
 
 
 def test_majority_two_of_three() -> None:
-    client = ScriptedCohereClient(
-        [
-            chat_text(_ballot_json(True)),
-            chat_text(_ballot_json(True)),
-            chat_text(_ballot_json(False)),
-        ]
-    )
-    verdict = judge(_gold(), _result(), client=client, n_votes=3)
+    provider = MockChatProvider(texts=[_ballot_json(True), _ballot_json(True), _ballot_json(False)])
+    verdict = judge(_gold(), _result(), provider=provider, n_votes=3)
     assert verdict.correct is True  # 2 of 3
     assert verdict.n_votes == 3
     assert verdict.agreement == pytest.approx(2 / 3)
@@ -123,8 +117,8 @@ def test_majority_two_of_three() -> None:
 
 def test_all_votes_abstain_on_unparseable_output() -> None:
     # one vote, original + retry both junk -> abstain -> empty verdict
-    client = ScriptedCohereClient([chat_text("garbage"), chat_text("more garbage")])
-    verdict = judge(_gold(), _result(), client=client, n_votes=1)
+    provider = MockChatProvider(texts=["garbage", "more garbage"])
+    verdict = judge(_gold(), _result(), provider=provider, n_votes=1)
     assert verdict.n_votes == 0
     assert verdict.correct is False
     assert verdict.ballots == []
@@ -132,7 +126,7 @@ def test_all_votes_abstain_on_unparseable_output() -> None:
 
 def test_retry_recovers_after_one_bad_response() -> None:
     # first response unparseable, retry returns a valid ballot
-    client = ScriptedCohereClient([chat_text("oops not json"), chat_text(_ballot_json(True))])
-    verdict = judge(_gold(), _result(), client=client, n_votes=1)
+    provider = MockChatProvider(texts=["oops not json", _ballot_json(True)])
+    verdict = judge(_gold(), _result(), provider=provider, n_votes=1)
     assert verdict.n_votes == 1
     assert verdict.correct is True
