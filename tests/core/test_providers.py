@@ -108,6 +108,23 @@ def test_mock_provider_routes_text() -> None:
     assert provider.complete(messages=[]).text == "routed"
 
 
+def test_local_embedder_with_injected_model() -> None:
+    import numpy as np
+
+    from grounded_rag.core.clients.local_embedder import LocalEmbedder
+    from grounded_rag.core.types import Embedder
+
+    class _FakeModel:
+        def encode(self, texts: list[str]) -> object:
+            return np.array([[float(len(t)), 1.0] for t in texts])
+
+    embedder = LocalEmbedder(model=_FakeModel())
+    assert isinstance(embedder, Embedder)
+    assert embedder.dim == 2
+    assert embedder.embed_documents(["ab", "abc"]) == [[2.0, 1.0], [3.0, 1.0]]
+    assert embedder.embed_query("abcd") == [4.0, 1.0]
+
+
 def test_factory_cohere_and_errors() -> None:
     client = MockCohereClient()
     provider = build_chat_provider("cohere", cohere_client=client)

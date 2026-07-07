@@ -14,7 +14,7 @@ from grounded_rag.core.clients.cohere_client import build_client
 from grounded_rag.core.clients.embedder import CohereEmbedder
 from grounded_rag.core.config import Settings, load_settings
 from grounded_rag.core.logging import configure_logging
-from grounded_rag.core.types import RetrievalMode
+from grounded_rag.core.types import Embedder, RetrievalMode
 from grounded_rag.eval.comparison import DEFAULT_VARIANTS, comparison_to_markdown, run_comparison
 from grounded_rag.eval.report import report_to_markdown, write_report
 from grounded_rag.eval.retrieval import evaluate_retrieval, retrieval_report_to_markdown
@@ -44,12 +44,27 @@ def _build_parser() -> argparse.ArgumentParser:
     rv.add_argument(
         "--compare", action="store_true", help="compare sparse vs dense vs hybrid retrieval"
     )
+    rv.add_argument(
+        "--embedder",
+        choices=["cohere", "local"],
+        default="cohere",
+        help="'local' uses model2vec (offline, no key) for dense/hybrid",
+    )
     return parser
 
 
-def _cmd_retrieval_eval(settings: Settings, docs: str, gold_path: str | None, compare: bool) -> int:
-    client = build_client(settings)
-    embedder = CohereEmbedder(client, model=settings.cohere.embed_model)
+def _make_embedder(kind: str, settings: Settings) -> Embedder:
+    if kind == "local":
+        from grounded_rag.core.clients.local_embedder import LocalEmbedder
+
+        return LocalEmbedder()
+    return CohereEmbedder(build_client(settings), model=settings.cohere.embed_model)
+
+
+def _cmd_retrieval_eval(
+    settings: Settings, docs: str, gold_path: str | None, compare: bool, embedder_kind: str
+) -> int:
+    embedder = _make_embedder(embedder_kind, settings)
     gold = load_gold(gold_path or settings.eval.gold_path)
     chunks = load_corpus(docs, settings)
     modes = (
@@ -60,9 +75,18 @@ def _cmd_retrieval_eval(settings: Settings, docs: str, gold_path: str | None, co
     out_dir = Path(settings.eval.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    # Return at least max(k) results so recall@k is well-defined for every k.
+    max_k = max(settings.eval.k_values)
     rows = ["| method | n | recall@k | MRR |", "|---|--:|---|--:|"]
     for mode in modes:
-        cfg = settings.retrieval.model_copy(update={"mode": mode, "use_reranker": False})
+        cfg = settings.retrieval.model_copy(
+            update={
+                "mode": mode,
+                "use_reranker": False,
+                "rerank_top_n": max_k,
+                "top_k": max(settings.retrieval.top_k, max_k),
+            }
+        )
         index = build_index(chunks, embedder, cfg)
         retriever = build_retriever(cfg, index=index, embedder=embedder, reranker=None)
         report = evaluate_retrieval(gold, retriever, settings.eval.k_values)
@@ -130,7 +154,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "eval":
         return _cmd_eval(settings, args.docs, args.compare)
     if args.command == "retrieval-eval":
-        return _cmd_retrieval_eval(settings, args.docs, args.gold, args.compare)
+        return _cmd_retrieval_eval(settings, args.docs, args.gold, args.compare, args.embedder)
     return 1
 
 

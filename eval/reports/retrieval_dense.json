@@ -1,16 +1,16 @@
 {
   "schema_version": "1",
   "git_sha": "b04bb5a",
-  "timestamp": "2026-07-07T19:11:33.710981+00:00",
-  "mode": "sparse",
+  "timestamp": "2026-07-07T19:11:33.774197+00:00",
+  "mode": "dense",
   "reranked": false,
   "n": 150,
   "recall_at_k": {
-    "1": 0.9,
-    "5": 0.98,
-    "10": 0.9866666666666667
+    "1": 0.7933333333333333,
+    "5": 0.9666666666666667,
+    "10": 0.9933333333333333
   },
-  "mrr": 0.9341111111111111,
+  "mrr": 0.8728412698412698,
   "per_query": [
     {
       "record_id": "sq-572f59b4a23a5019007fc587",
@@ -21,13 +21,13 @@
         "rhine-4",
         "rhine-0",
         "rhine-2",
-        "rhine-3",
         "rhine-1",
-        "private-school-2",
-        "oxygen-3",
+        "rhine-3",
         "rhine-5",
-        "oxygen-5",
-        "oxygen-7"
+        "oxygen-0",
+        "ctenophora-0",
+        "oxygen-3",
+        "oxygen-8"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -43,14 +43,14 @@
       ],
       "retrieved_doc_ids": [
         "economic-inequality-3",
-        "economic-inequality-0",
-        "european-union-law-1",
-        "islamism-1",
-        "imperialism-0",
         "economic-inequality-2",
-        "steam-engine-4",
+        "economic-inequality-1",
+        "imperialism-0",
+        "european-union-law-0",
+        "intergovernmental-panel-on-climate-chang-2",
+        "warsaw-1",
+        "private-school-0",
         "1973-oil-crisis-2",
-        "construction-0",
         "1973-oil-crisis-1"
       ],
       "recall_at_k": {
@@ -67,15 +67,15 @@
       ],
       "retrieved_doc_ids": [
         "islamism-2",
-        "warsaw-4",
         "islamism-3",
-        "rhine-5",
-        "yuan-dynasty-2",
+        "islamism-1",
+        "imperialism-1",
         "yuan-dynasty-3",
-        "economic-inequality-1",
-        "economic-inequality-3",
-        "warsaw-5",
-        "oxygen-4"
+        "yuan-dynasty-2",
+        "imperialism-0",
+        "islamism-0",
+        "yuan-dynasty-0",
+        "normans-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -91,15 +91,15 @@
       ],
       "retrieved_doc_ids": [
         "normans-0",
-        "yuan-dynasty-1",
-        "black-death-0",
-        "rhine-2",
+        "yuan-dynasty-2",
+        "normans-3",
         "normans-2",
-        "university-of-chicago-4",
         "french-and-indian-war-4",
-        "french-and-indian-war-6",
-        "warsaw-2",
-        "private-school-4"
+        "imperialism-0",
+        "normans-1",
+        "jacksonville-florida-0",
+        "yuan-dynasty-1",
+        "french-and-indian-war-5"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -116,14 +116,14 @@
       "retrieved_doc_ids": [
         "packet-switching-2",
         "packet-switching-1",
-        "french-and-indian-war-5",
-        "harvard-university-0",
+        "french-and-indian-war-4",
+        "french-and-indian-war-2",
         "packet-switching-0",
-        "islamism-3",
+        "packet-switching-3",
         "huguenot-0",
-        "jacksonville-florida-0",
-        "rhine-5",
-        "pharmacy-1"
+        "islamism-3",
+        "normans-2",
+        "rhine-5"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -138,23 +138,23 @@
         "rhine-2"
       ],
       "retrieved_doc_ids": [
-        "rhine-2",
         "rhine-0",
+        "rhine-2",
         "rhine-4",
-        "french-and-indian-war-3",
         "rhine-3",
         "rhine-1",
         "rhine-5",
-        "construction-1",
-        "black-death-1",
-        "french-and-indian-war-7"
+        "french-and-indian-war-3",
+        "southern-california-0",
+        "southern-california-1",
+        "oxygen-9"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-57097b50200fba140036804d",
@@ -163,15 +163,15 @@
       ],
       "retrieved_doc_ids": [
         "sky-united-kingdom-0",
-        "sky-united-kingdom-2",
         "sky-united-kingdom-1",
-        "fresno-california-0",
-        "force-3",
-        "french-and-indian-war-4",
+        "sky-united-kingdom-2",
         "packet-switching-0",
-        "french-and-indian-war-1",
+        "private-school-4",
+        "warsaw-7",
         "economic-inequality-0",
-        "french-and-indian-war-7"
+        "fresno-california-0",
+        "private-school-5",
+        "fresno-california-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -188,14 +188,14 @@
       "retrieved_doc_ids": [
         "european-union-law-2",
         "european-union-law-3",
+        "ctenophora-0",
+        "warsaw-1",
         "european-union-law-1",
-        "fresno-california-0",
-        "jacksonville-florida-0",
-        "force-3",
-        "economic-inequality-2",
-        "intergovernmental-panel-on-climate-chang-1",
-        "huguenot-2",
-        "prime-number-2"
+        "oxygen-7",
+        "private-school-3",
+        "scottish-parliament-0",
+        "university-of-chicago-0",
+        "ctenophora-4"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -212,14 +212,14 @@
       "retrieved_doc_ids": [
         "pharmacy-2",
         "pharmacy-5",
-        "french-and-indian-war-0",
-        "normans-1",
-        "oxygen-3",
-        "prime-number-3",
-        "geology-0",
-        "warsaw-2",
-        "amazon-rainforest-2",
-        "normans-3"
+        "pharmacy-4",
+        "pharmacy-0",
+        "pharmacy-3",
+        "jacksonville-florida-0",
+        "warsaw-7",
+        "geology-3",
+        "victoria-australia-0",
+        "french-and-indian-war-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -235,15 +235,15 @@
       ],
       "retrieved_doc_ids": [
         "civil-disobedience-1",
-        "civil-disobedience-0",
+        "construction-1",
         "university-of-chicago-0",
-        "university-of-chicago-4",
+        "civil-disobedience-0",
+        "geology-1",
+        "intergovernmental-panel-on-climate-chang-2",
         "harvard-university-1",
-        "islamism-1",
-        "immune-system-3",
-        "fresno-california-2",
-        "yuan-dynasty-3",
-        "oxygen-3"
+        "force-2",
+        "scottish-parliament-1",
+        "economic-inequality-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -258,23 +258,23 @@
         "black-death-0"
       ],
       "retrieved_doc_ids": [
-        "ctenophora-4",
         "black-death-2",
-        "fresno-california-2",
-        "rhine-3",
-        "jacksonville-florida-0",
         "black-death-0",
-        "rhine-2",
-        "packet-switching-1",
-        "yuan-dynasty-2",
-        "huguenot-2"
+        "civil-disobedience-0",
+        "oxygen-5",
+        "yuan-dynasty-0",
+        "oxygen-1",
+        "islamism-0",
+        "1973-oil-crisis-2",
+        "islamism-2",
+        "yuan-dynasty-2"
       ],
       "recall_at_k": {
         "1": 0.0,
-        "5": 0.0,
+        "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 0.16666666666666666
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-5729f3831d0469140077967b",
@@ -283,15 +283,15 @@
       ],
       "retrieved_doc_ids": [
         "amazon-rainforest-0",
-        "amazon-rainforest-2",
-        "jacksonville-florida-0",
         "ctenophora-4",
-        "economic-inequality-3",
-        "amazon-rainforest-1",
-        "private-school-0",
-        "packet-switching-3",
-        "european-union-law-1",
-        "warsaw-6"
+        "oxygen-7",
+        "university-of-chicago-1",
+        "amazon-rainforest-2",
+        "black-death-2",
+        "ctenophora-2",
+        "economic-inequality-2",
+        "immune-system-0",
+        "black-death-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -306,23 +306,23 @@
         "southern-california-0"
       ],
       "retrieved_doc_ids": [
-        "southern-california-1",
         "southern-california-0",
-        "jacksonville-florida-0",
-        "force-3",
-        "rhine-0",
-        "prime-number-1",
-        "victoria-australia-0",
+        "southern-california-1",
+        "computational-complexity-theory-0",
+        "imperialism-1",
+        "ctenophora-1",
         "computational-complexity-theory-3",
-        "rhine-2",
-        "warsaw-0"
+        "prime-number-2",
+        "private-school-3",
+        "force-3",
+        "scottish-parliament-2"
       ],
       "recall_at_k": {
-        "1": 0.0,
+        "1": 1.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 0.5
+      "reciprocal_rank": 1.0
     },
     {
       "record_id": "sq-572ffee1947a6a140053cf14",
@@ -331,15 +331,15 @@
       ],
       "retrieved_doc_ids": [
         "islamism-0",
-        "normans-2",
-        "geology-1",
-        "fresno-california-2",
-        "oxygen-3",
-        "warsaw-5",
-        "french-and-indian-war-5",
-        "jacksonville-florida-0",
-        "huguenot-2",
-        "force-3"
+        "imperialism-0",
+        "university-of-chicago-5",
+        "rhine-5",
+        "university-of-chicago-4",
+        "harvard-university-0",
+        "private-school-4",
+        "black-death-2",
+        "1973-oil-crisis-2",
+        "university-of-chicago-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -355,15 +355,15 @@
       ],
       "retrieved_doc_ids": [
         "prime-number-1",
-        "prime-number-5",
-        "prime-number-0",
         "prime-number-2",
-        "prime-number-7",
-        "computational-complexity-theory-2",
-        "oxygen-8",
         "prime-number-8",
-        "prime-number-6",
-        "computational-complexity-theory-1"
+        "prime-number-0",
+        "prime-number-5",
+        "prime-number-3",
+        "prime-number-7",
+        "prime-number-4",
+        "computational-complexity-theory-2",
+        "prime-number-6"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -379,15 +379,15 @@
       ],
       "retrieved_doc_ids": [
         "oxygen-9",
-        "oxygen-6",
-        "oxygen-3",
         "oxygen-2",
-        "1973-oil-crisis-2",
         "steam-engine-3",
         "oxygen-7",
-        "european-union-law-0",
-        "prime-number-2",
-        "ctenophora-3"
+        "packet-switching-3",
+        "steam-engine-0",
+        "oxygen-6",
+        "oxygen-4",
+        "sky-united-kingdom-2",
+        "fresno-california-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -403,15 +403,15 @@
       ],
       "retrieved_doc_ids": [
         "fresno-california-3",
-        "rhine-5",
-        "sky-united-kingdom-2",
         "warsaw-0",
-        "rhine-2",
+        "southern-california-0",
+        "oxygen-9",
+        "southern-california-2",
+        "amazon-rainforest-1",
+        "amazon-rainforest-2",
+        "geology-1",
         "fresno-california-0",
-        "yuan-dynasty-1",
-        "oxygen-4",
-        "warsaw-4",
-        "islamism-3"
+        "oxygen-4"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -427,15 +427,15 @@
       ],
       "retrieved_doc_ids": [
         "university-of-chicago-1",
+        "geology-0",
+        "sky-united-kingdom-0",
+        "black-death-2",
+        "black-death-0",
+        "university-of-chicago-4",
         "private-school-2",
-        "fresno-california-2",
-        "computational-complexity-theory-0",
-        "civil-disobedience-0",
-        "islamism-0",
-        "european-union-law-3",
-        "victoria-australia-0",
-        "european-union-law-2",
-        "normans-3"
+        "prime-number-6",
+        "warsaw-4",
+        "warsaw-7"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -450,23 +450,23 @@
         "islamism-3"
       ],
       "retrieved_doc_ids": [
-        "islamism-3",
-        "oxygen-2",
-        "intergovernmental-panel-on-climate-chang-1",
-        "immune-system-2",
-        "pharmacy-1",
-        "jacksonville-florida-0",
-        "fresno-california-2",
-        "european-union-law-1",
-        "immune-system-3",
-        "huguenot-2"
+        "prime-number-2",
+        "prime-number-5",
+        "european-union-law-3",
+        "private-school-3",
+        "ctenophora-1",
+        "force-2",
+        "force-3",
+        "civil-disobedience-1",
+        "force-0",
+        "prime-number-1"
       ],
       "recall_at_k": {
-        "1": 1.0,
-        "5": 1.0,
-        "10": 1.0
+        "1": 0.0,
+        "5": 0.0,
+        "10": 0.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.0
     },
     {
       "record_id": "sq-57268c01dd62a815002e8912",
@@ -475,15 +475,15 @@
       ],
       "retrieved_doc_ids": [
         "ctenophora-4",
-        "geology-0",
-        "warsaw-5",
-        "jacksonville-florida-0",
+        "oxygen-7",
+        "oxygen-3",
         "ctenophora-2",
-        "fresno-california-2",
-        "oxygen-9",
-        "warsaw-3",
-        "oxygen-8",
-        "scottish-parliament-0"
+        "amazon-rainforest-0",
+        "oxygen-4",
+        "oxygen-5",
+        "rhine-4",
+        "european-union-law-1",
+        "1973-oil-crisis-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -501,13 +501,13 @@
         "prime-number-7",
         "prime-number-4",
         "force-0",
-        "force-3",
-        "black-death-0",
-        "black-death-2",
-        "geology-0",
+        "prime-number-2",
+        "computational-complexity-theory-2",
         "prime-number-8",
-        "jacksonville-florida-0",
-        "force-1"
+        "force-3",
+        "prime-number-1",
+        "prime-number-0",
+        "computational-complexity-theory-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -523,15 +523,15 @@
       ],
       "retrieved_doc_ids": [
         "geology-2",
+        "geology-1",
+        "rhine-3",
+        "rhine-1",
         "ctenophora-1",
-        "fresno-california-0",
-        "immune-system-0",
-        "prime-number-5",
-        "jacksonville-florida-0",
-        "geology-0",
-        "fresno-california-3",
-        "pharmacy-1",
-        "immune-system-3"
+        "southern-california-0",
+        "geology-3",
+        "warsaw-0",
+        "ctenophora-3",
+        "imperialism-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -547,15 +547,15 @@
       ],
       "retrieved_doc_ids": [
         "force-2",
-        "force-3",
         "force-0",
-        "ctenophora-2",
-        "rhine-0",
-        "oxygen-0",
-        "warsaw-0",
-        "oxygen-6",
-        "french-and-indian-war-5",
-        "imperialism-1"
+        "steam-engine-3",
+        "geology-2",
+        "intergovernmental-panel-on-climate-chang-2",
+        "force-3",
+        "computational-complexity-theory-3",
+        "immune-system-1",
+        "prime-number-2",
+        "prime-number-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -571,15 +571,15 @@
       ],
       "retrieved_doc_ids": [
         "fresno-california-0",
+        "fresno-california-1",
         "fresno-california-3",
-        "oxygen-5",
-        "packet-switching-1",
+        "construction-0",
         "warsaw-7",
-        "oxygen-4",
+        "economic-inequality-0",
         "huguenot-1",
         "fresno-california-2",
-        "harvard-university-0",
-        "economic-inequality-0"
+        "economic-inequality-2",
+        "warsaw-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -594,23 +594,23 @@
         "private-school-5"
       ],
       "retrieved_doc_ids": [
-        "private-school-5",
         "imperialism-0",
-        "sky-united-kingdom-1",
-        "prime-number-6",
-        "amazon-rainforest-1",
-        "harvard-university-1",
-        "normans-1",
+        "scottish-parliament-0",
+        "sky-united-kingdom-0",
+        "islamism-0",
         "french-and-indian-war-6",
-        "european-union-law-3",
-        "private-school-3"
+        "private-school-5",
+        "1973-oil-crisis-2",
+        "private-school-3",
+        "warsaw-1",
+        "islamism-1"
       ],
       "recall_at_k": {
-        "1": 1.0,
-        "5": 1.0,
+        "1": 0.0,
+        "5": 0.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.16666666666666666
     },
     {
       "record_id": "sq-572a005f1d046914007796b7",
@@ -620,14 +620,14 @@
       "retrieved_doc_ids": [
         "amazon-rainforest-1",
         "amazon-rainforest-2",
-        "fresno-california-0",
-        "amazon-rainforest-0",
-        "packet-switching-1",
         "construction-0",
-        "oxygen-5",
-        "fresno-california-2",
-        "geology-2",
-        "warsaw-7"
+        "fresno-california-0",
+        "fresno-california-3",
+        "warsaw-0",
+        "1973-oil-crisis-0",
+        "steam-engine-4",
+        "scottish-parliament-2",
+        "imperialism-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -646,12 +646,12 @@
         "university-of-chicago-2",
         "university-of-chicago-5",
         "university-of-chicago-0",
-        "jacksonville-florida-0",
-        "geology-1",
-        "geology-0",
-        "islamism-3",
-        "pharmacy-2",
-        "university-of-chicago-1"
+        "private-school-1",
+        "harvard-university-1",
+        "private-school-2",
+        "private-school-4",
+        "private-school-3",
+        "fresno-california-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -669,13 +669,13 @@
         "black-death-1",
         "black-death-2",
         "black-death-0",
-        "jacksonville-florida-0",
-        "oxygen-3",
-        "private-school-3",
-        "rhine-3",
-        "ctenophora-3",
-        "rhine-2",
-        "force-3"
+        "amazon-rainforest-0",
+        "pharmacy-5",
+        "ctenophora-4",
+        "oxygen-7",
+        "rhine-5",
+        "pharmacy-0",
+        "imperialism-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -690,23 +690,23 @@
         "warsaw-5"
       ],
       "retrieved_doc_ids": [
-        "warsaw-3",
         "warsaw-5",
-        "warsaw-1",
+        "warsaw-3",
         "warsaw-0",
         "warsaw-6",
-        "amazon-rainforest-2",
-        "prime-number-3",
         "warsaw-4",
-        "immune-system-3",
-        "force-3"
+        "warsaw-2",
+        "rhine-3",
+        "rhine-5",
+        "french-and-indian-war-3",
+        "geology-1"
       ],
       "recall_at_k": {
-        "1": 0.0,
+        "1": 1.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 0.5
+      "reciprocal_rank": 1.0
     },
     {
       "record_id": "sq-573007fab2c2fd140056876b",
@@ -714,16 +714,16 @@
         "rhine-3"
       ],
       "retrieved_doc_ids": [
-        "french-and-indian-war-0",
-        "oxygen-4",
+        "normans-3",
+        "yuan-dynasty-2",
         "rhine-3",
-        "black-death-1",
-        "prime-number-6",
-        "civil-disobedience-0",
-        "european-union-law-3",
-        "harvard-university-1",
-        "normans-1",
-        "islamism-0"
+        "oxygen-4",
+        "french-and-indian-war-2",
+        "black-death-0",
+        "french-and-indian-war-4",
+        "rhine-5",
+        "warsaw-4",
+        "french-and-indian-war-5"
       ],
       "recall_at_k": {
         "1": 0.0,
@@ -739,14 +739,14 @@
       ],
       "retrieved_doc_ids": [
         "warsaw-6",
-        "warsaw-1",
-        "warsaw-0",
-        "scottish-parliament-1",
-        "warsaw-3",
-        "warsaw-2",
         "warsaw-4",
-        "jacksonville-florida-0",
+        "warsaw-2",
+        "warsaw-3",
         "warsaw-5",
+        "warsaw-0",
+        "warsaw-1",
+        "normans-0",
+        "warsaw-7",
         "rhine-2"
       ],
       "recall_at_k": {
@@ -764,14 +764,14 @@
       "retrieved_doc_ids": [
         "economic-inequality-2",
         "economic-inequality-3",
-        "oxygen-3",
-        "jacksonville-florida-0",
-        "european-union-law-0",
-        "prime-number-8",
         "warsaw-1",
+        "geology-3",
+        "economic-inequality-1",
+        "geology-1",
+        "intergovernmental-panel-on-climate-chang-2",
+        "prime-number-2",
         "intergovernmental-panel-on-climate-chang-0",
-        "prime-number-6",
-        "french-and-indian-war-1"
+        "sky-united-kingdom-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -787,15 +787,15 @@
       ],
       "retrieved_doc_ids": [
         "oxygen-6",
-        "pharmacy-1",
-        "oxygen-4",
+        "oxygen-9",
+        "steam-engine-3",
         "oxygen-5",
-        "economic-inequality-1",
-        "european-union-law-2",
-        "force-3",
-        "steam-engine-0",
-        "packet-switching-2",
-        "construction-0"
+        "oxygen-4",
+        "construction-0",
+        "steam-engine-1",
+        "steam-engine-2",
+        "intergovernmental-panel-on-climate-chang-2",
+        "steam-engine-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -811,15 +811,15 @@
       ],
       "retrieved_doc_ids": [
         "warsaw-0",
+        "warsaw-3",
+        "warsaw-4",
         "warsaw-6",
-        "warsaw-1",
         "warsaw-5",
         "warsaw-2",
-        "warsaw-3",
-        "economic-inequality-3",
-        "economic-inequality-2",
-        "prime-number-5",
-        "ctenophora-2"
+        "amazon-rainforest-2",
+        "harvard-university-0",
+        "rhine-3",
+        "rhine-5"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -836,14 +836,14 @@
       "retrieved_doc_ids": [
         "private-school-2",
         "victoria-australia-1",
-        "private-school-1",
-        "huguenot-1",
         "private-school-3",
-        "private-school-0",
-        "private-school-4",
-        "huguenot-2",
-        "fresno-california-0",
-        "private-school-5"
+        "university-of-chicago-4",
+        "private-school-1",
+        "islamism-0",
+        "huguenot-0",
+        "scottish-parliament-0",
+        "private-school-5",
+        "private-school-4"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -859,15 +859,15 @@
       ],
       "retrieved_doc_ids": [
         "force-0",
-        "black-death-2",
         "prime-number-7",
-        "rhine-2",
         "prime-number-4",
-        "geology-0",
-        "black-death-0",
-        "rhine-5",
-        "southern-california-2",
-        "fresno-california-3"
+        "force-3",
+        "prime-number-1",
+        "university-of-chicago-3",
+        "yuan-dynasty-3",
+        "prime-number-5",
+        "prime-number-2",
+        "islamism-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -884,14 +884,14 @@
       "retrieved_doc_ids": [
         "huguenot-2",
         "huguenot-1",
-        "prime-number-6",
-        "normans-1",
         "huguenot-0",
-        "steam-engine-4",
-        "rhine-0",
-        "european-union-law-3",
-        "harvard-university-1",
-        "construction-1"
+        "french-and-indian-war-4",
+        "french-and-indian-war-1",
+        "imperialism-0",
+        "normans-1",
+        "french-and-indian-war-0",
+        "warsaw-2",
+        "french-and-indian-war-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -907,15 +907,15 @@
       ],
       "retrieved_doc_ids": [
         "french-and-indian-war-0",
-        "fresno-california-2",
-        "huguenot-1",
-        "1973-oil-crisis-2",
-        "huguenot-2",
-        "oxygen-9",
-        "french-and-indian-war-6",
-        "jacksonville-florida-0",
-        "warsaw-1",
-        "oxygen-3"
+        "french-and-indian-war-7",
+        "french-and-indian-war-1",
+        "rhine-5",
+        "huguenot-0",
+        "french-and-indian-war-2",
+        "black-death-0",
+        "scottish-parliament-0",
+        "normans-1",
+        "1973-oil-crisis-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -931,15 +931,15 @@
       ],
       "retrieved_doc_ids": [
         "ctenophora-0",
-        "ctenophora-3",
-        "steam-engine-4",
-        "european-union-law-1",
-        "european-union-law-3",
-        "black-death-1",
-        "oxygen-1",
-        "fresno-california-2",
-        "oxygen-3",
-        "ctenophora-2"
+        "oxygen-0",
+        "ctenophora-1",
+        "rhine-2",
+        "ctenophora-2",
+        "rhine-3",
+        "pharmacy-5",
+        "ctenophora-4",
+        "warsaw-5",
+        "rhine-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -956,14 +956,14 @@
       "retrieved_doc_ids": [
         "warsaw-1",
         "warsaw-2",
-        "warsaw-4",
-        "warsaw-7",
         "warsaw-6",
-        "warsaw-0",
         "warsaw-5",
-        "yuan-dynasty-1",
+        "warsaw-4",
         "warsaw-3",
-        "private-school-2"
+        "warsaw-7",
+        "huguenot-2",
+        "imperialism-0",
+        "sky-united-kingdom-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -980,14 +980,14 @@
       "retrieved_doc_ids": [
         "european-union-law-1",
         "european-union-law-2",
-        "steam-engine-1",
-        "european-union-law-3",
-        "oxygen-4",
+        "intergovernmental-panel-on-climate-chang-2",
+        "pharmacy-3",
+        "oxygen-6",
         "european-union-law-0",
-        "packet-switching-3",
-        "sky-united-kingdom-1",
-        "scottish-parliament-0",
-        "yuan-dynasty-3"
+        "european-union-law-3",
+        "oxygen-7",
+        "steam-engine-3",
+        "civil-disobedience-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1003,15 +1003,15 @@
       ],
       "retrieved_doc_ids": [
         "scottish-parliament-0",
-        "jacksonville-florida-0",
+        "scottish-parliament-2",
+        "warsaw-7",
         "computational-complexity-theory-2",
-        "pharmacy-1",
-        "islamism-0",
-        "fresno-california-2",
+        "economic-inequality-2",
+        "intergovernmental-panel-on-climate-chang-0",
+        "european-union-law-3",
         "french-and-indian-war-6",
-        "1973-oil-crisis-0",
-        "oxygen-0",
-        "economic-inequality-2"
+        "islamism-0",
+        "computational-complexity-theory-4"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1026,23 +1026,23 @@
         "oxygen-7"
       ],
       "retrieved_doc_ids": [
-        "oxygen-0",
-        "oxygen-2",
+        "oxygen-3",
         "oxygen-7",
+        "oxygen-2",
         "oxygen-6",
         "oxygen-9",
-        "university-of-chicago-5",
-        "geology-0",
+        "french-and-indian-war-3",
+        "oxygen-5",
+        "geology-1",
         "oxygen-8",
-        "oxygen-3",
-        "sky-united-kingdom-2"
+        "oxygen-1"
       ],
       "recall_at_k": {
         "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 0.3333333333333333
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-5725e45689a1e219009ac048",
@@ -1050,23 +1050,23 @@
         "fresno-california-1"
       ],
       "retrieved_doc_ids": [
-        "fresno-california-2",
-        "private-school-5",
+        "fresno-california-0",
         "fresno-california-1",
-        "immune-system-0",
-        "private-school-1",
-        "european-union-law-1",
-        "imperialism-1",
-        "jacksonville-florida-0",
-        "huguenot-2",
-        "force-3"
+        "geology-2",
+        "fresno-california-2",
+        "southern-california-1",
+        "construction-0",
+        "harvard-university-0",
+        "fresno-california-3",
+        "southern-california-2",
+        "prime-number-8"
       ],
       "recall_at_k": {
         "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 0.3333333333333333
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-57332562d058e614000b5730",
@@ -1075,15 +1075,15 @@
       ],
       "retrieved_doc_ids": [
         "warsaw-2",
+        "french-and-indian-war-0",
+        "french-and-indian-war-7",
         "warsaw-6",
-        "jacksonville-florida-0",
+        "rhine-5",
         "university-of-chicago-4",
-        "warsaw-0",
-        "warsaw-5",
-        "normans-1",
-        "fresno-california-0",
-        "french-and-indian-war-4",
-        "warsaw-3"
+        "jacksonville-florida-0",
+        "huguenot-1",
+        "fresno-california-3",
+        "normans-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1099,15 +1099,15 @@
       ],
       "retrieved_doc_ids": [
         "warsaw-3",
-        "warsaw-6",
         "warsaw-5",
-        "huguenot-2",
-        "warsaw-7",
-        "jacksonville-florida-0",
+        "warsaw-2",
+        "warsaw-4",
+        "warsaw-6",
         "warsaw-0",
         "warsaw-1",
-        "fresno-california-0",
-        "force-3"
+        "jacksonville-florida-0",
+        "warsaw-7",
+        "huguenot-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1124,14 +1124,14 @@
       "retrieved_doc_ids": [
         "rhine-1",
         "rhine-5",
-        "rhine-2",
         "rhine-0",
-        "rhine-4",
-        "black-death-0",
+        "rhine-2",
+        "economic-inequality-3",
+        "islamism-3",
+        "warsaw-6",
         "rhine-3",
-        "economic-inequality-1",
-        "private-school-3",
-        "southern-california-1"
+        "construction-1",
+        "economic-inequality-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1148,14 +1148,14 @@
       "retrieved_doc_ids": [
         "force-1",
         "force-0",
-        "rhine-5",
         "geology-0",
-        "pharmacy-2",
-        "amazon-rainforest-0",
-        "yuan-dynasty-1",
-        "black-death-2",
-        "rhine-2",
-        "university-of-chicago-3"
+        "university-of-chicago-5",
+        "computational-complexity-theory-2",
+        "packet-switching-0",
+        "force-3",
+        "university-of-chicago-3",
+        "intergovernmental-panel-on-climate-chang-1",
+        "prime-number-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1170,23 +1170,23 @@
         "steam-engine-3"
       ],
       "retrieved_doc_ids": [
+        "steam-engine-3",
         "steam-engine-0",
+        "steam-engine-2",
+        "steam-engine-1",
         "force-2",
-        "immune-system-3",
+        "oxygen-9",
+        "oxygen-2",
         "force-3",
-        "prime-number-4",
-        "prime-number-0",
-        "pharmacy-1",
-        "fresno-california-2",
-        "jacksonville-florida-0",
-        "prime-number-2"
+        "computational-complexity-theory-3",
+        "oxygen-5"
       ],
       "recall_at_k": {
-        "1": 0.0,
-        "5": 0.0,
-        "10": 0.0
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
       },
-      "reciprocal_rank": 0.0
+      "reciprocal_rank": 1.0
     },
     {
       "record_id": "sq-57300e2604bcaa1900d770b7",
@@ -1195,15 +1195,15 @@
       ],
       "retrieved_doc_ids": [
         "islamism-1",
-        "imperialism-0",
-        "sky-united-kingdom-1",
         "islamism-2",
-        "french-and-indian-war-4",
         "imperialism-1",
-        "normans-1",
-        "jacksonville-florida-0",
-        "intergovernmental-panel-on-climate-chang-1",
-        "pharmacy-1"
+        "islamism-3",
+        "imperialism-0",
+        "yuan-dynasty-2",
+        "french-and-indian-war-6",
+        "european-union-law-3",
+        "private-school-3",
+        "yuan-dynasty-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1219,15 +1219,15 @@
       ],
       "retrieved_doc_ids": [
         "normans-2",
-        "french-and-indian-war-5",
-        "jacksonville-florida-0",
-        "black-death-2",
-        "fresno-california-2",
-        "southern-california-1",
-        "warsaw-2",
-        "force-3",
-        "normans-3",
-        "huguenot-2"
+        "economic-inequality-3",
+        "imperialism-0",
+        "1973-oil-crisis-0",
+        "economic-inequality-2",
+        "computational-complexity-theory-2",
+        "scottish-parliament-0",
+        "islamism-0",
+        "scottish-parliament-2",
+        "prime-number-6"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1244,13 +1244,13 @@
       "retrieved_doc_ids": [
         "computational-complexity-theory-4",
         "computational-complexity-theory-2",
-        "computational-complexity-theory-1",
-        "prime-number-1",
-        "european-union-law-0",
         "prime-number-2",
+        "prime-number-1",
         "prime-number-0",
-        "steam-engine-0",
-        "european-union-law-3",
+        "intergovernmental-panel-on-climate-chang-2",
+        "prime-number-8",
+        "prime-number-7",
+        "intergovernmental-panel-on-climate-chang-1",
         "computational-complexity-theory-3"
       ],
       "recall_at_k": {
@@ -1267,15 +1267,15 @@
       ],
       "retrieved_doc_ids": [
         "oxygen-2",
-        "oxygen-6",
-        "oxygen-0",
-        "oxygen-3",
         "oxygen-9",
+        "oxygen-6",
+        "oxygen-3",
         "oxygen-7",
+        "oxygen-0",
         "oxygen-8",
-        "fresno-california-2",
-        "french-and-indian-war-1",
-        "european-union-law-1"
+        "steam-engine-3",
+        "steam-engine-1",
+        "immune-system-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1290,23 +1290,23 @@
         "yuan-dynasty-3"
       ],
       "retrieved_doc_ids": [
-        "normans-1",
-        "steam-engine-4",
-        "black-death-1",
-        "prime-number-6",
-        "french-and-indian-war-0",
-        "harvard-university-1",
-        "european-union-law-3",
-        "construction-1",
-        "rhine-0",
-        "intergovernmental-panel-on-climate-chang-1"
+        "yuan-dynasty-3",
+        "yuan-dynasty-2",
+        "french-and-indian-war-2",
+        "black-death-0",
+        "prime-number-5",
+        "oxygen-4",
+        "yuan-dynasty-1",
+        "islamism-2",
+        "civil-disobedience-0",
+        "ctenophora-3"
       ],
       "recall_at_k": {
-        "1": 0.0,
-        "5": 0.0,
-        "10": 0.0
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
       },
-      "reciprocal_rank": 0.0
+      "reciprocal_rank": 1.0
     },
     {
       "record_id": "sq-572fcb6da23a5019007fc9f1",
@@ -1315,15 +1315,15 @@
       ],
       "retrieved_doc_ids": [
         "scottish-parliament-2",
-        "scottish-parliament-0",
-        "civil-disobedience-0",
         "european-union-law-3",
-        "steam-engine-4",
-        "computational-complexity-theory-0",
-        "prime-number-5",
-        "pharmacy-2",
-        "normans-1",
-        "pharmacy-1"
+        "scottish-parliament-0",
+        "european-union-law-2",
+        "civil-disobedience-0",
+        "scottish-parliament-1",
+        "1973-oil-crisis-2",
+        "economic-inequality-0",
+        "private-school-3",
+        "european-union-law-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1339,15 +1339,15 @@
       ],
       "retrieved_doc_ids": [
         "civil-disobedience-0",
-        "computational-complexity-theory-3",
-        "pharmacy-3",
-        "pharmacy-1",
-        "computational-complexity-theory-2",
-        "fresno-california-2",
-        "fresno-california-3",
-        "rhine-0",
+        "harvard-university-1",
         "civil-disobedience-1",
-        "oxygen-0"
+        "construction-1",
+        "european-union-law-3",
+        "intergovernmental-panel-on-climate-chang-2",
+        "private-school-3",
+        "european-union-law-2",
+        "pharmacy-1",
+        "economic-inequality-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1363,15 +1363,15 @@
       ],
       "retrieved_doc_ids": [
         "imperialism-1",
-        "scottish-parliament-1",
-        "civil-disobedience-1",
-        "prime-number-3",
+        "imperialism-0",
+        "normans-1",
+        "harvard-university-0",
+        "normans-2",
+        "rhine-5",
         "warsaw-6",
-        "black-death-0",
+        "islamism-2",
         "french-and-indian-war-4",
-        "pharmacy-1",
-        "oxygen-4",
-        "harvard-university-0"
+        "geology-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1388,14 +1388,14 @@
       "retrieved_doc_ids": [
         "prime-number-5",
         "prime-number-1",
+        "university-of-chicago-3",
+        "prime-number-2",
         "french-and-indian-war-2",
-        "fresno-california-2",
-        "normans-1",
-        "french-and-indian-war-0",
-        "european-union-law-0",
-        "normans-0",
-        "french-and-indian-war-5",
-        "amazon-rainforest-1"
+        "prime-number-3",
+        "prime-number-0",
+        "force-0",
+        "prime-number-7",
+        "prime-number-4"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1410,23 +1410,23 @@
         "black-death-2"
       ],
       "retrieved_doc_ids": [
-        "black-death-2",
         "black-death-0",
+        "black-death-2",
+        "university-of-chicago-1",
         "black-death-1",
         "force-0",
-        "geology-0",
-        "yuan-dynasty-1",
-        "prime-number-7",
-        "prime-number-4",
         "prime-number-6",
-        "university-of-chicago-3"
+        "intergovernmental-panel-on-climate-chang-2",
+        "civil-disobedience-1",
+        "prime-number-5",
+        "yuan-dynasty-0"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-571cdcb85efbb31900334e0c",
@@ -1436,14 +1436,14 @@
       "retrieved_doc_ids": [
         "oxygen-0",
         "oxygen-6",
-        "oxygen-2",
-        "oxygen-3",
         "oxygen-7",
-        "private-school-5",
+        "oxygen-3",
+        "oxygen-2",
         "oxygen-9",
-        "imperialism-1",
-        "oxygen-8",
-        "prime-number-8"
+        "prime-number-3",
+        "immune-system-2",
+        "ctenophora-0",
+        "prime-number-7"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1458,23 +1458,23 @@
         "amazon-rainforest-2"
       ],
       "retrieved_doc_ids": [
-        "amazon-rainforest-2",
+        "force-3",
+        "prime-number-2",
+        "prime-number-1",
         "geology-3",
-        "intergovernmental-panel-on-climate-chang-1",
-        "pharmacy-1",
-        "warsaw-3",
-        "immune-system-2",
-        "fresno-california-2",
-        "jacksonville-florida-0",
-        "immune-system-3",
-        "european-union-law-1"
+        "prime-number-5",
+        "amazon-rainforest-2",
+        "european-union-law-3",
+        "computational-complexity-theory-1",
+        "computational-complexity-theory-0",
+        "prime-number-0"
       ],
       "recall_at_k": {
-        "1": 1.0,
-        "5": 1.0,
+        "1": 0.0,
+        "5": 0.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.16666666666666666
     },
     {
       "record_id": "sq-5733f5264776f419006615a3",
@@ -1483,15 +1483,15 @@
       ],
       "retrieved_doc_ids": [
         "french-and-indian-war-6",
-        "islamism-2",
-        "islamism-0",
-        "harvard-university-1",
-        "huguenot-0",
-        "fresno-california-2",
-        "1973-oil-crisis-2",
-        "university-of-chicago-1",
-        "oxygen-3",
-        "jacksonville-florida-0"
+        "european-union-law-2",
+        "scottish-parliament-0",
+        "french-and-indian-war-1",
+        "european-union-law-3",
+        "victoria-australia-0",
+        "scottish-parliament-1",
+        "european-union-law-1",
+        "imperialism-0",
+        "imperialism-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1507,15 +1507,15 @@
       ],
       "retrieved_doc_ids": [
         "geology-0",
-        "prime-number-6",
-        "huguenot-2",
-        "warsaw-6",
-        "black-death-2",
+        "geology-1",
+        "university-of-chicago-3",
+        "geology-3",
+        "oxygen-1",
+        "amazon-rainforest-2",
         "ctenophora-3",
-        "private-school-2",
-        "force-0",
-        "black-death-1",
-        "rhine-3"
+        "prime-number-6",
+        "oxygen-3",
+        "geology-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1534,12 +1534,12 @@
         "university-of-chicago-5",
         "university-of-chicago-4",
         "university-of-chicago-0",
-        "jacksonville-florida-0",
+        "private-school-4",
+        "private-school-1",
+        "harvard-university-1",
+        "victoria-australia-1",
         "university-of-chicago-1",
-        "warsaw-0",
-        "yuan-dynasty-1",
-        "harvard-university-0",
-        "islamism-0"
+        "university-of-chicago-3"
       ],
       "recall_at_k": {
         "1": 0.0,
@@ -1556,14 +1556,14 @@
       "retrieved_doc_ids": [
         "victoria-australia-1",
         "private-school-1",
-        "private-school-0",
-        "private-school-4",
-        "private-school-5",
-        "private-school-2",
         "private-school-3",
+        "private-school-5",
+        "private-school-4",
+        "private-school-0",
         "victoria-australia-0",
-        "fresno-california-3",
-        "prime-number-8"
+        "private-school-2",
+        "scottish-parliament-0",
+        "scottish-parliament-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1579,15 +1579,15 @@
       ],
       "retrieved_doc_ids": [
         "geology-1",
-        "black-death-2",
-        "1973-oil-crisis-2",
-        "oxygen-9",
-        "pharmacy-3",
+        "geology-0",
         "jacksonville-florida-0",
-        "private-school-4",
-        "yuan-dynasty-1",
-        "university-of-chicago-3",
-        "huguenot-2"
+        "geology-2",
+        "southern-california-0",
+        "warsaw-0",
+        "amazon-rainforest-2",
+        "french-and-indian-war-3",
+        "warsaw-5",
+        "rhine-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1603,15 +1603,15 @@
       ],
       "retrieved_doc_ids": [
         "french-and-indian-war-4",
-        "huguenot-0",
-        "french-and-indian-war-5",
-        "french-and-indian-war-1",
+        "imperialism-0",
         "french-and-indian-war-0",
-        "immune-system-3",
+        "french-and-indian-war-1",
+        "normans-1",
         "french-and-indian-war-7",
+        "huguenot-0",
         "normans-2",
-        "black-death-2",
-        "french-and-indian-war-2"
+        "french-and-indian-war-5",
+        "black-death-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1627,15 +1627,15 @@
       ],
       "retrieved_doc_ids": [
         "steam-engine-2",
-        "steam-engine-1",
         "steam-engine-3",
+        "steam-engine-1",
+        "oxygen-5",
         "steam-engine-0",
-        "rhine-0",
-        "force-3",
-        "sky-united-kingdom-2",
-        "scottish-parliament-0",
-        "pharmacy-1",
-        "packet-switching-3"
+        "oxygen-2",
+        "steam-engine-4",
+        "oxygen-3",
+        "oxygen-9",
+        "harvard-university-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1651,15 +1651,15 @@
       ],
       "retrieved_doc_ids": [
         "construction-0",
-        "force-3",
-        "oxygen-2",
-        "intergovernmental-panel-on-climate-chang-0",
-        "pharmacy-0",
-        "warsaw-1",
-        "oxygen-7",
-        "jacksonville-florida-0",
-        "pharmacy-1",
-        "huguenot-2"
+        "construction-1",
+        "fresno-california-0",
+        "packet-switching-3",
+        "packet-switching-1",
+        "steam-engine-0",
+        "economic-inequality-0",
+        "steam-engine-1",
+        "steam-engine-3",
+        "steam-engine-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1675,15 +1675,15 @@
       ],
       "retrieved_doc_ids": [
         "scottish-parliament-1",
-        "yuan-dynasty-1",
-        "french-and-indian-war-1",
-        "oxygen-9",
-        "huguenot-1",
-        "pharmacy-2",
-        "french-and-indian-war-7",
-        "black-death-2",
-        "warsaw-6",
-        "prime-number-6"
+        "european-union-law-2",
+        "european-union-law-3",
+        "intergovernmental-panel-on-climate-chang-2",
+        "civil-disobedience-0",
+        "private-school-3",
+        "european-union-law-1",
+        "intergovernmental-panel-on-climate-chang-0",
+        "victoria-australia-0",
+        "civil-disobedience-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1699,15 +1699,15 @@
       ],
       "retrieved_doc_ids": [
         "immune-system-0",
-        "immune-system-2",
         "immune-system-3",
-        "private-school-1",
-        "immune-system-1",
+        "immune-system-2",
+        "oxygen-7",
         "ctenophora-2",
-        "private-school-5",
-        "imperialism-1",
-        "normans-1",
-        "rhine-3"
+        "amazon-rainforest-0",
+        "oxygen-0",
+        "immune-system-1",
+        "ctenophora-4",
+        "oxygen-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1724,14 +1724,14 @@
       "retrieved_doc_ids": [
         "university-of-chicago-2",
         "university-of-chicago-0",
-        "university-of-chicago-5",
-        "warsaw-0",
         "university-of-chicago-4",
-        "harvard-university-1",
-        "jacksonville-florida-0",
-        "pharmacy-1",
-        "prime-number-6",
-        "scottish-parliament-1"
+        "private-school-3",
+        "private-school-4",
+        "private-school-1",
+        "private-school-0",
+        "pharmacy-2",
+        "victoria-australia-1",
+        "pharmacy-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1747,15 +1747,15 @@
       ],
       "retrieved_doc_ids": [
         "prime-number-3",
-        "french-and-indian-war-5",
-        "prime-number-2",
-        "prime-number-5",
-        "black-death-0",
-        "economic-inequality-3",
         "prime-number-8",
-        "jacksonville-florida-0",
+        "prime-number-5",
+        "prime-number-6",
+        "prime-number-2",
+        "prime-number-1",
+        "prime-number-0",
+        "computational-complexity-theory-2",
         "prime-number-7",
-        "european-union-law-3"
+        "prime-number-4"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1771,15 +1771,15 @@
       ],
       "retrieved_doc_ids": [
         "french-and-indian-war-1",
-        "packet-switching-3",
-        "pharmacy-3",
-        "warsaw-6",
-        "pharmacy-1",
-        "warsaw-4",
-        "huguenot-1",
-        "huguenot-2",
-        "pharmacy-5",
-        "prime-number-6"
+        "french-and-indian-war-6",
+        "french-and-indian-war-2",
+        "european-union-law-2",
+        "french-and-indian-war-4",
+        "intergovernmental-panel-on-climate-chang-0",
+        "imperialism-0",
+        "packet-switching-1",
+        "intergovernmental-panel-on-climate-chang-2",
+        "french-and-indian-war-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1795,15 +1795,15 @@
       ],
       "retrieved_doc_ids": [
         "jacksonville-florida-0",
-        "amazon-rainforest-1",
+        "warsaw-7",
+        "fresno-california-2",
         "fresno-california-0",
-        "intergovernmental-panel-on-climate-chang-1",
         "fresno-california-1",
-        "european-union-law-2",
-        "amazon-rainforest-2",
-        "steam-engine-4",
-        "pharmacy-1",
-        "ctenophora-3"
+        "huguenot-1",
+        "fresno-california-3",
+        "southern-california-0",
+        "private-school-4",
+        "french-and-indian-war-4"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1818,23 +1818,23 @@
         "prime-number-8"
       ],
       "retrieved_doc_ids": [
-        "prime-number-8",
         "prime-number-2",
+        "prime-number-8",
+        "prime-number-1",
         "prime-number-3",
         "prime-number-5",
+        "prime-number-6",
         "prime-number-0",
-        "packet-switching-3",
-        "geology-0",
-        "sky-united-kingdom-0",
-        "victoria-australia-0",
-        "scottish-parliament-1"
+        "prime-number-7",
+        "computational-complexity-theory-0",
+        "computational-complexity-theory-2"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-57294baaaf94a219006aa26b",
@@ -1844,14 +1844,14 @@
       "retrieved_doc_ids": [
         "intergovernmental-panel-on-climate-chang-0",
         "intergovernmental-panel-on-climate-chang-1",
-        "islamism-0",
+        "black-death-2",
         "intergovernmental-panel-on-climate-chang-2",
-        "european-union-law-0",
-        "immune-system-0",
-        "university-of-chicago-5",
-        "prime-number-6",
-        "normans-1",
-        "french-and-indian-war-0"
+        "european-union-law-2",
+        "construction-1",
+        "pharmacy-1",
+        "university-of-chicago-0",
+        "computational-complexity-theory-3",
+        "pharmacy-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1867,15 +1867,15 @@
       ],
       "retrieved_doc_ids": [
         "packet-switching-3",
-        "force-3",
-        "immune-system-3",
+        "pharmacy-1",
+        "construction-0",
+        "construction-1",
         "sky-united-kingdom-2",
-        "pharmacy-4",
+        "intergovernmental-panel-on-climate-chang-0",
         "intergovernmental-panel-on-climate-chang-1",
-        "immune-system-2",
-        "fresno-california-2",
-        "european-union-law-0",
-        "jacksonville-florida-0"
+        "force-3",
+        "private-school-3",
+        "european-union-law-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1891,15 +1891,15 @@
       ],
       "retrieved_doc_ids": [
         "pharmacy-0",
+        "pharmacy-5",
         "pharmacy-4",
         "pharmacy-1",
-        "pharmacy-5",
-        "steam-engine-4",
-        "oxygen-0",
-        "warsaw-1",
-        "construction-1",
-        "warsaw-5",
-        "warsaw-0"
+        "pharmacy-2",
+        "pharmacy-3",
+        "fresno-california-1",
+        "fresno-california-0",
+        "university-of-chicago-2",
+        "jacksonville-florida-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1916,14 +1916,14 @@
       "retrieved_doc_ids": [
         "pharmacy-5",
         "pharmacy-0",
-        "victoria-australia-1",
+        "pharmacy-4",
         "pharmacy-2",
         "pharmacy-1",
-        "private-school-3",
-        "university-of-chicago-5",
-        "private-school-5",
-        "ctenophora-3",
-        "steam-engine-4"
+        "pharmacy-3",
+        "private-school-1",
+        "construction-1",
+        "private-school-4",
+        "private-school-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1939,15 +1939,15 @@
       ],
       "retrieved_doc_ids": [
         "french-and-indian-war-3",
-        "fresno-california-2",
-        "french-and-indian-war-5",
-        "force-3",
-        "jacksonville-florida-0",
-        "oxygen-3",
-        "huguenot-2",
-        "pharmacy-1",
-        "european-union-law-1",
-        "european-union-law-0"
+        "ctenophora-4",
+        "oxygen-5",
+        "ctenophora-0",
+        "oxygen-1",
+        "geology-3",
+        "geology-1",
+        "rhine-3",
+        "prime-number-5",
+        "imperialism-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1963,15 +1963,15 @@
       ],
       "retrieved_doc_ids": [
         "european-union-law-3",
-        "islamism-0",
-        "european-union-law-0",
-        "private-school-5",
-        "jacksonville-florida-0",
         "european-union-law-2",
+        "scottish-parliament-1",
         "european-union-law-1",
-        "force-3",
-        "packet-switching-0",
-        "french-and-indian-war-2"
+        "civil-disobedience-0",
+        "private-school-3",
+        "computational-complexity-theory-4",
+        "french-and-indian-war-6",
+        "scottish-parliament-2",
+        "intergovernmental-panel-on-climate-chang-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -1988,14 +1988,14 @@
       "retrieved_doc_ids": [
         "pharmacy-1",
         "pharmacy-4",
-        "european-union-law-1",
-        "geology-0",
         "pharmacy-3",
-        "prime-number-2",
-        "jacksonville-florida-0",
-        "french-and-indian-war-5",
-        "prime-number-0",
-        "harvard-university-1"
+        "pharmacy-0",
+        "pharmacy-5",
+        "european-union-law-3",
+        "european-union-law-0",
+        "oxygen-9",
+        "packet-switching-3",
+        "european-union-law-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2011,15 +2011,15 @@
       ],
       "retrieved_doc_ids": [
         "french-and-indian-war-7",
-        "steam-engine-3",
-        "pharmacy-1",
-        "1973-oil-crisis-2",
-        "intergovernmental-panel-on-climate-chang-1",
-        "oxygen-9",
-        "french-and-indian-war-5",
+        "scottish-parliament-0",
         "steam-engine-4",
-        "oxygen-1",
-        "ctenophora-2"
+        "imperialism-0",
+        "french-and-indian-war-0",
+        "sky-united-kingdom-1",
+        "economic-inequality-1",
+        "french-and-indian-war-3",
+        "1973-oil-crisis-2",
+        "rhine-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2034,23 +2034,23 @@
         "normans-3"
       ],
       "retrieved_doc_ids": [
-        "jacksonville-florida-0",
-        "normans-3",
-        "normans-0",
+        "warsaw-4",
         "warsaw-6",
-        "black-death-0",
-        "huguenot-2",
-        "rhine-2",
-        "rhine-0",
-        "oxygen-3",
-        "french-and-indian-war-5"
+        "normans-0",
+        "normans-3",
+        "islamism-2",
+        "prime-number-5",
+        "ctenophora-1",
+        "university-of-chicago-1",
+        "prime-number-6",
+        "warsaw-3"
       ],
       "recall_at_k": {
         "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 0.5
+      "reciprocal_rank": 0.25
     },
     {
       "record_id": "sq-57096c95200fba1400367fbb",
@@ -2059,15 +2059,15 @@
       ],
       "retrieved_doc_ids": [
         "sky-united-kingdom-2",
-        "black-death-0",
-        "oxygen-5",
+        "oxygen-1",
         "oxygen-4",
-        "pharmacy-1",
-        "force-3",
-        "scottish-parliament-2",
-        "french-and-indian-war-5",
-        "computational-complexity-theory-1",
-        "oxygen-8"
+        "intergovernmental-panel-on-climate-chang-1",
+        "sky-united-kingdom-1",
+        "oxygen-9",
+        "intergovernmental-panel-on-climate-chang-2",
+        "black-death-0",
+        "private-school-1",
+        "oxygen-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2083,15 +2083,15 @@
       ],
       "retrieved_doc_ids": [
         "pharmacy-4",
-        "pharmacy-1",
         "pharmacy-0",
-        "sky-united-kingdom-0",
+        "pharmacy-1",
+        "pharmacy-5",
         "pharmacy-3",
-        "private-school-0",
-        "geology-0",
-        "packet-switching-1",
-        "prime-number-0",
-        "1973-oil-crisis-2"
+        "packet-switching-3",
+        "pharmacy-2",
+        "european-union-law-0",
+        "computational-complexity-theory-2",
+        "computational-complexity-theory-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2107,15 +2107,15 @@
       ],
       "retrieved_doc_ids": [
         "prime-number-4",
-        "packet-switching-0",
-        "force-2",
-        "force-0",
+        "geology-2",
         "force-3",
-        "jacksonville-florida-0",
-        "oxygen-3",
-        "huguenot-2",
-        "fresno-california-2",
-        "french-and-indian-war-5"
+        "prime-number-7",
+        "force-0",
+        "prime-number-3",
+        "oxygen-0",
+        "computational-complexity-theory-2",
+        "harvard-university-0",
+        "force-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2132,14 +2132,14 @@
       "retrieved_doc_ids": [
         "steam-engine-1",
         "steam-engine-0",
+        "steam-engine-2",
+        "steam-engine-3",
+        "oxygen-2",
         "oxygen-3",
-        "force-3",
-        "economic-inequality-2",
-        "jacksonville-florida-0",
-        "islamism-3",
-        "pharmacy-1",
-        "prime-number-0",
-        "huguenot-2"
+        "rhine-4",
+        "oxygen-8",
+        "intergovernmental-panel-on-climate-chang-2",
+        "oxygen-7"
       ],
       "recall_at_k": {
         "1": 0.0,
@@ -2155,15 +2155,15 @@
       ],
       "retrieved_doc_ids": [
         "packet-switching-1",
-        "force-3",
-        "fresno-california-2",
-        "pharmacy-1",
-        "jacksonville-florida-0",
-        "huguenot-2",
-        "oxygen-3",
-        "french-and-indian-war-5",
-        "prime-number-1",
-        "european-union-law-1"
+        "packet-switching-2",
+        "packet-switching-0",
+        "packet-switching-3",
+        "sky-united-kingdom-2",
+        "immune-system-2",
+        "prime-number-3",
+        "immune-system-1",
+        "computational-complexity-theory-3",
+        "prime-number-5"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2178,23 +2178,23 @@
         "french-and-indian-war-5"
       ],
       "retrieved_doc_ids": [
-        "french-and-indian-war-5",
         "french-and-indian-war-2",
-        "jacksonville-florida-0",
-        "fresno-california-2",
-        "european-union-law-1",
-        "warsaw-2",
-        "oxygen-4",
-        "french-and-indian-war-7",
-        "huguenot-1",
-        "university-of-chicago-4"
+        "french-and-indian-war-4",
+        "french-and-indian-war-5",
+        "geology-1",
+        "french-and-indian-war-3",
+        "normans-1",
+        "french-and-indian-war-1",
+        "private-school-3",
+        "huguenot-0",
+        "scottish-parliament-1"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.3333333333333333
     },
     {
       "record_id": "sq-5733f062d058e614000b6633",
@@ -2204,14 +2204,14 @@
       "retrieved_doc_ids": [
         "french-and-indian-war-2",
         "french-and-indian-war-5",
-        "black-death-2",
         "yuan-dynasty-3",
-        "1973-oil-crisis-2",
+        "normans-0",
+        "normans-3",
+        "yuan-dynasty-2",
+        "university-of-chicago-0",
+        "harvard-university-2",
         "yuan-dynasty-0",
-        "geology-1",
-        "french-and-indian-war-1",
-        "yuan-dynasty-1",
-        "pharmacy-4"
+        "normans-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2228,14 +2228,14 @@
       "retrieved_doc_ids": [
         "warsaw-7",
         "warsaw-4",
-        "warsaw-1",
+        "warsaw-3",
         "warsaw-2",
         "warsaw-6",
-        "oxygen-1",
+        "warsaw-1",
         "warsaw-5",
-        "warsaw-0",
-        "pharmacy-1",
-        "warsaw-3"
+        "huguenot-1",
+        "fresno-california-2",
+        "jacksonville-florida-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2251,15 +2251,15 @@
       ],
       "retrieved_doc_ids": [
         "southern-california-1",
-        "southern-california-2",
         "southern-california-0",
-        "pharmacy-1",
-        "force-3",
-        "warsaw-0",
-        "construction-1",
+        "southern-california-2",
+        "steam-engine-4",
+        "imperialism-1",
         "fresno-california-2",
-        "huguenot-2",
-        "oxygen-2"
+        "rhine-2",
+        "geology-3",
+        "intergovernmental-panel-on-climate-chang-0",
+        "private-school-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2275,15 +2275,15 @@
       ],
       "retrieved_doc_ids": [
         "huguenot-1",
-        "normans-3",
-        "huguenot-2",
-        "french-and-indian-war-5",
-        "fresno-california-2",
-        "european-union-law-0",
         "huguenot-0",
-        "oxygen-3",
-        "oxygen-4",
-        "black-death-0"
+        "huguenot-2",
+        "warsaw-3",
+        "jacksonville-florida-0",
+        "rhine-5",
+        "warsaw-2",
+        "french-and-indian-war-4",
+        "french-and-indian-war-1",
+        "french-and-indian-war-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2300,14 +2300,14 @@
       "retrieved_doc_ids": [
         "ctenophora-2",
         "ctenophora-3",
+        "amazon-rainforest-0",
+        "immune-system-0",
         "ctenophora-4",
+        "immune-system-2",
         "ctenophora-0",
-        "ctenophora-1",
-        "private-school-1",
-        "private-school-0",
-        "computational-complexity-theory-1",
-        "scottish-parliament-1",
-        "victoria-australia-1"
+        "oxygen-0",
+        "immune-system-1",
+        "ctenophora-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2324,14 +2324,14 @@
       "retrieved_doc_ids": [
         "rhine-0",
         "rhine-2",
-        "jacksonville-florida-0",
-        "huguenot-2",
-        "warsaw-6",
         "rhine-5",
-        "black-death-0",
-        "oxygen-4",
-        "scottish-parliament-1",
-        "imperialism-1"
+        "warsaw-6",
+        "southern-california-0",
+        "french-and-indian-war-4",
+        "warsaw-2",
+        "ctenophora-1",
+        "fresno-california-3",
+        "rhine-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2347,15 +2347,15 @@
       ],
       "retrieved_doc_ids": [
         "yuan-dynasty-2",
-        "normans-3",
-        "islamism-3",
-        "rhine-5",
         "yuan-dynasty-3",
-        "french-and-indian-war-0",
-        "economic-inequality-3",
-        "economic-inequality-2",
-        "scottish-parliament-1",
-        "yuan-dynasty-1"
+        "yuan-dynasty-1",
+        "normans-3",
+        "rhine-3",
+        "yuan-dynasty-0",
+        "french-and-indian-war-4",
+        "rhine-5",
+        "islamism-2",
+        "french-and-indian-war-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2371,15 +2371,15 @@
       ],
       "retrieved_doc_ids": [
         "warsaw-4",
-        "warsaw-2",
-        "huguenot-1",
         "warsaw-6",
         "warsaw-7",
-        "economic-inequality-2",
-        "warsaw-1",
         "warsaw-3",
-        "jacksonville-florida-0",
-        "prime-number-6"
+        "warsaw-2",
+        "huguenot-1",
+        "warsaw-5",
+        "harvard-university-2",
+        "prime-number-6",
+        "university-of-chicago-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2395,15 +2395,15 @@
       ],
       "retrieved_doc_ids": [
         "fresno-california-2",
-        "fresno-california-0",
+        "southern-california-1",
         "warsaw-7",
+        "fresno-california-0",
+        "southern-california-0",
+        "warsaw-3",
+        "rhine-5",
+        "imperialism-0",
         "jacksonville-florida-0",
-        "french-and-indian-war-4",
-        "oxygen-3",
-        "harvard-university-0",
-        "ctenophora-4",
-        "normans-1",
-        "french-and-indian-war-5"
+        "fresno-california-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2419,15 +2419,15 @@
       ],
       "retrieved_doc_ids": [
         "harvard-university-1",
-        "islamism-3",
-        "amazon-rainforest-2",
-        "southern-california-0",
-        "imperialism-1",
-        "imperialism-0",
-        "private-school-4",
-        "french-and-indian-war-4",
-        "yuan-dynasty-0",
-        "warsaw-4"
+        "economic-inequality-1",
+        "economic-inequality-3",
+        "black-death-0",
+        "steam-engine-3",
+        "oxygen-9",
+        "oxygen-7",
+        "economic-inequality-2",
+        "european-union-law-3",
+        "private-school-4"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2443,15 +2443,15 @@
       ],
       "retrieved_doc_ids": [
         "economic-inequality-0",
-        "computational-complexity-theory-2",
-        "private-school-1",
-        "1973-oil-crisis-1",
-        "economic-inequality-2",
+        "european-union-law-3",
+        "private-school-3",
         "warsaw-7",
-        "victoria-australia-0",
-        "amazon-rainforest-1",
-        "steam-engine-4",
-        "economic-inequality-3"
+        "fresno-california-3",
+        "european-union-law-2",
+        "private-school-1",
+        "scottish-parliament-2",
+        "university-of-chicago-4",
+        "private-school-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2467,15 +2467,15 @@
       ],
       "retrieved_doc_ids": [
         "force-3",
-        "force-2",
-        "french-and-indian-war-5",
-        "construction-0",
         "force-0",
-        "1973-oil-crisis-2",
-        "imperialism-1",
-        "french-and-indian-war-3",
-        "oxygen-3",
-        "huguenot-2"
+        "force-2",
+        "prime-number-4",
+        "prime-number-8",
+        "prime-number-2",
+        "force-1",
+        "prime-number-0",
+        "intergovernmental-panel-on-climate-chang-1",
+        "economic-inequality-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2491,15 +2491,15 @@
       ],
       "retrieved_doc_ids": [
         "computational-complexity-theory-3",
-        "computational-complexity-theory-1",
-        "computational-complexity-theory-4",
-        "pharmacy-1",
-        "southern-california-0",
+        "computational-complexity-theory-2",
         "prime-number-0",
-        "oxygen-0",
-        "warsaw-2",
-        "packet-switching-2",
-        "pharmacy-5"
+        "prime-number-4",
+        "force-3",
+        "prime-number-8",
+        "force-0",
+        "prime-number-2",
+        "prime-number-7",
+        "prime-number-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2515,15 +2515,15 @@
       ],
       "retrieved_doc_ids": [
         "packet-switching-0",
-        "oxygen-2",
-        "intergovernmental-panel-on-climate-chang-1",
-        "pharmacy-1",
-        "immune-system-2",
-        "fresno-california-2",
-        "jacksonville-florida-0",
-        "immune-system-3",
-        "european-union-law-1",
-        "huguenot-2"
+        "sky-united-kingdom-1",
+        "sky-united-kingdom-2",
+        "packet-switching-2",
+        "sky-united-kingdom-0",
+        "prime-number-2",
+        "computational-complexity-theory-4",
+        "civil-disobedience-0",
+        "prime-number-1",
+        "european-union-law-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2539,15 +2539,15 @@
       ],
       "retrieved_doc_ids": [
         "oxygen-1",
-        "black-death-0",
-        "oxygen-4",
-        "oxygen-5",
-        "scottish-parliament-2",
+        "imperialism-0",
         "geology-1",
-        "islamism-0",
-        "scottish-parliament-0",
-        "packet-switching-1",
-        "prime-number-5"
+        "oxygen-4",
+        "geology-0",
+        "amazon-rainforest-2",
+        "1973-oil-crisis-1",
+        "harvard-university-0",
+        "1973-oil-crisis-2",
+        "fresno-california-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2562,23 +2562,23 @@
         "computational-complexity-theory-4"
       ],
       "retrieved_doc_ids": [
+        "computational-complexity-theory-2",
         "computational-complexity-theory-4",
         "computational-complexity-theory-3",
-        "computational-complexity-theory-2",
         "computational-complexity-theory-1",
         "intergovernmental-panel-on-climate-chang-0",
-        "steam-engine-2",
         "prime-number-4",
-        "construction-1",
-        "oxygen-6",
-        "european-union-law-1"
+        "intergovernmental-panel-on-climate-chang-2",
+        "force-0",
+        "prime-number-8",
+        "prime-number-0"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-5728855d3acd2414000dfa8d",
@@ -2587,15 +2587,15 @@
       ],
       "retrieved_doc_ids": [
         "yuan-dynasty-1",
-        "normans-1",
-        "sky-united-kingdom-1",
+        "yuan-dynasty-2",
         "yuan-dynasty-0",
-        "prime-number-6",
-        "black-death-0",
-        "prime-number-8",
-        "geology-2",
-        "warsaw-1",
-        "civil-disobedience-0"
+        "yuan-dynasty-3",
+        "normans-2",
+        "normans-3",
+        "normans-1",
+        "islamism-2",
+        "normans-0",
+        "islamism-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2611,15 +2611,15 @@
       ],
       "retrieved_doc_ids": [
         "intergovernmental-panel-on-climate-chang-2",
-        "intergovernmental-panel-on-climate-chang-1",
-        "intergovernmental-panel-on-climate-chang-0",
-        "imperialism-0",
-        "sky-united-kingdom-0",
-        "huguenot-1",
         "1973-oil-crisis-2",
-        "french-and-indian-war-5",
-        "warsaw-4",
-        "warsaw-7"
+        "intergovernmental-panel-on-climate-chang-0",
+        "intergovernmental-panel-on-climate-chang-1",
+        "computational-complexity-theory-2",
+        "oxygen-4",
+        "oxygen-1",
+        "oxygen-7",
+        "oxygen-3",
+        "university-of-chicago-5"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2635,15 +2635,15 @@
       ],
       "retrieved_doc_ids": [
         "immune-system-1",
-        "intergovernmental-panel-on-climate-chang-1",
-        "ctenophora-4",
-        "geology-1",
-        "university-of-chicago-5",
-        "geology-2",
-        "immune-system-3",
-        "oxygen-4",
+        "oxygen-0",
+        "oxygen-7",
+        "immune-system-2",
+        "ctenophora-0",
+        "pharmacy-0",
+        "pharmacy-5",
+        "black-death-1",
         "oxygen-3",
-        "jacksonville-florida-0"
+        "oxygen-8"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2658,23 +2658,23 @@
         "prime-number-6"
       ],
       "retrieved_doc_ids": [
-        "prime-number-6",
-        "prime-number-0",
         "prime-number-2",
+        "prime-number-6",
         "prime-number-3",
+        "prime-number-0",
         "prime-number-5",
-        "prime-number-4",
-        "prime-number-7",
-        "huguenot-2",
-        "construction-1",
-        "force-1"
+        "prime-number-8",
+        "computational-complexity-theory-4",
+        "prime-number-1",
+        "ctenophora-1",
+        "computational-complexity-theory-2"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-5727e0474b864d1900163f08",
@@ -2682,23 +2682,23 @@
         "harvard-university-2"
       ],
       "retrieved_doc_ids": [
-        "harvard-university-0",
-        "harvard-university-1",
-        "french-and-indian-war-4",
         "university-of-chicago-1",
-        "harvard-university-2",
-        "french-and-indian-war-3",
-        "packet-switching-0",
-        "immune-system-3",
         "sky-united-kingdom-0",
-        "oxygen-5"
+        "harvard-university-2",
+        "sky-united-kingdom-1",
+        "islamism-0",
+        "university-of-chicago-5",
+        "harvard-university-0",
+        "oxygen-1",
+        "scottish-parliament-1",
+        "immune-system-3"
       ],
       "recall_at_k": {
         "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 0.2
+      "reciprocal_rank": 0.3333333333333333
     },
     {
       "record_id": "sq-57274beff1498d1400e8f5e4",
@@ -2708,14 +2708,14 @@
       "retrieved_doc_ids": [
         "private-school-3",
         "victoria-australia-1",
-        "imperialism-1",
-        "construction-1",
+        "private-school-1",
         "private-school-5",
-        "university-of-chicago-5",
+        "private-school-0",
+        "imperialism-1",
         "islamism-0",
-        "rhine-0",
-        "pharmacy-1",
-        "fresno-california-2"
+        "private-school-4",
+        "private-school-2",
+        "imperialism-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2731,15 +2731,15 @@
       ],
       "retrieved_doc_ids": [
         "pharmacy-3",
-        "economic-inequality-2",
-        "economic-inequality-3",
-        "european-union-law-1",
-        "geology-3",
-        "construction-0",
-        "pharmacy-1",
+        "european-union-law-3",
+        "pharmacy-4",
         "economic-inequality-0",
-        "huguenot-2",
-        "harvard-university-1"
+        "european-union-law-0",
+        "european-union-law-1",
+        "pharmacy-1",
+        "pharmacy-5",
+        "pharmacy-0",
+        "scottish-parliament-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2756,14 +2756,14 @@
       "retrieved_doc_ids": [
         "prime-number-2",
         "prime-number-1",
-        "prime-number-0",
         "prime-number-6",
+        "prime-number-0",
+        "prime-number-8",
+        "computational-complexity-theory-2",
+        "prime-number-3",
         "prime-number-7",
         "prime-number-5",
-        "1973-oil-crisis-2",
-        "prime-number-3",
-        "prime-number-4",
-        "prime-number-8"
+        "prime-number-4"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2780,14 +2780,14 @@
       "retrieved_doc_ids": [
         "immune-system-3",
         "immune-system-1",
-        "immune-system-2",
-        "rhine-4",
-        "jacksonville-florida-0",
-        "computational-complexity-theory-0",
-        "civil-disobedience-0",
-        "oxygen-4",
-        "oxygen-3",
-        "private-school-1"
+        "prime-number-0",
+        "immune-system-0",
+        "computational-complexity-theory-3",
+        "computational-complexity-theory-2",
+        "force-3",
+        "force-2",
+        "computational-complexity-theory-1",
+        "ctenophora-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2802,23 +2802,23 @@
         "construction-1"
       ],
       "retrieved_doc_ids": [
-        "construction-1",
-        "normans-2",
         "construction-0",
-        "prime-number-3",
-        "huguenot-1",
-        "prime-number-6",
-        "black-death-1",
-        "prime-number-4",
-        "prime-number-2",
-        "victoria-australia-0"
+        "construction-1",
+        "economic-inequality-0",
+        "computational-complexity-theory-2",
+        "private-school-3",
+        "intergovernmental-panel-on-climate-chang-0",
+        "scottish-parliament-2",
+        "european-union-law-2",
+        "packet-switching-3",
+        "intergovernmental-panel-on-climate-chang-1"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-57297d421d046914007794e5",
@@ -2826,23 +2826,23 @@
         "prime-number-0"
       ],
       "retrieved_doc_ids": [
-        "prime-number-0",
-        "prime-number-3",
         "prime-number-8",
+        "prime-number-0",
+        "prime-number-2",
         "computational-complexity-theory-2",
-        "prime-number-5",
-        "force-3",
-        "black-death-1",
-        "computational-complexity-theory-0",
-        "prime-number-1",
-        "european-union-law-2"
+        "prime-number-3",
+        "computational-complexity-theory-1",
+        "prime-number-7",
+        "prime-number-4",
+        "geology-2",
+        "prime-number-1"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-57096e1ced30961900e84102",
@@ -2851,15 +2851,15 @@
       ],
       "retrieved_doc_ids": [
         "sky-united-kingdom-1",
-        "victoria-australia-0",
+        "sky-united-kingdom-0",
+        "warsaw-1",
         "geology-3",
-        "amazon-rainforest-1",
-        "french-and-indian-war-1",
-        "economic-inequality-2",
-        "force-0",
-        "scottish-parliament-0",
-        "islamism-0",
-        "steam-engine-3"
+        "scottish-parliament-1",
+        "victoria-australia-0",
+        "black-death-0",
+        "jacksonville-florida-0",
+        "prime-number-6",
+        "warsaw-7"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2875,15 +2875,15 @@
       ],
       "retrieved_doc_ids": [
         "rhine-5",
-        "rhine-0",
-        "rhine-1",
-        "rhine-2",
-        "rhine-4",
-        "economic-inequality-2",
         "rhine-3",
-        "french-and-indian-war-0",
-        "oxygen-4",
-        "private-school-5"
+        "rhine-0",
+        "rhine-2",
+        "rhine-1",
+        "french-and-indian-war-4",
+        "normans-3",
+        "imperialism-0",
+        "french-and-indian-war-2",
+        "ctenophora-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2898,23 +2898,23 @@
         "yuan-dynasty-0"
       ],
       "retrieved_doc_ids": [
-        "yuan-dynasty-0",
+        "yuan-dynasty-3",
         "yuan-dynasty-2",
         "yuan-dynasty-1",
+        "harvard-university-2",
+        "yuan-dynasty-0",
+        "university-of-chicago-0",
         "french-and-indian-war-2",
-        "yuan-dynasty-3",
-        "warsaw-4",
-        "warsaw-6",
-        "pharmacy-3",
-        "normans-1",
-        "pharmacy-4"
+        "university-of-chicago-3",
+        "french-and-indian-war-5",
+        "warsaw-4"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.2
     },
     {
       "record_id": "sq-572a058aaf94a219006aa751",
@@ -2922,23 +2922,23 @@
         "immune-system-2"
       ],
       "retrieved_doc_ids": [
-        "immune-system-2",
-        "immune-system-1",
-        "immune-system-3",
         "immune-system-0",
-        "civil-disobedience-0",
-        "pharmacy-1",
-        "intergovernmental-panel-on-climate-chang-1",
-        "economic-inequality-1",
-        "european-union-law-3",
-        "force-3"
+        "immune-system-3",
+        "immune-system-1",
+        "immune-system-2",
+        "imperialism-1",
+        "ctenophora-4",
+        "computational-complexity-theory-2",
+        "black-death-0",
+        "intergovernmental-panel-on-climate-chang-2",
+        "packet-switching-3"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.25
     },
     {
       "record_id": "sq-57265200708984140094c237",
@@ -2948,14 +2948,14 @@
       "retrieved_doc_ids": [
         "1973-oil-crisis-2",
         "1973-oil-crisis-1",
-        "french-and-indian-war-3",
-        "force-1",
-        "warsaw-1",
-        "french-and-indian-war-2",
-        "rhine-5",
-        "islamism-3",
         "imperialism-1",
-        "french-and-indian-war-6"
+        "imperialism-0",
+        "french-and-indian-war-0",
+        "french-and-indian-war-7",
+        "islamism-1",
+        "steam-engine-4",
+        "private-school-4",
+        "economic-inequality-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -2970,16 +2970,40 @@
         "university-of-chicago-3"
       ],
       "retrieved_doc_ids": [
+        "force-3",
         "force-1",
         "university-of-chicago-3",
-        "university-of-chicago-5",
-        "packet-switching-0",
-        "private-school-4",
-        "oxygen-1",
         "steam-engine-2",
-        "yuan-dynasty-1",
-        "scottish-parliament-2",
-        "huguenot-1"
+        "computational-complexity-theory-0",
+        "oxygen-8",
+        "steam-engine-0",
+        "prime-number-0",
+        "force-0",
+        "prime-number-2"
+      ],
+      "recall_at_k": {
+        "1": 0.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "record_id": "sq-572648e8dd62a815002e8076",
+      "relevant_doc_ids": [
+        "ctenophora-1"
+      ],
+      "retrieved_doc_ids": [
+        "ctenophora-3",
+        "ctenophora-1",
+        "ctenophora-2",
+        "ctenophora-0",
+        "oxygen-0",
+        "immune-system-0",
+        "immune-system-2",
+        "amazon-rainforest-0",
+        "immune-system-1",
+        "pharmacy-5"
       ],
       "recall_at_k": {
         "1": 0.0,
@@ -2989,45 +3013,21 @@
       "reciprocal_rank": 0.5
     },
     {
-      "record_id": "sq-572648e8dd62a815002e8076",
-      "relevant_doc_ids": [
-        "ctenophora-1"
-      ],
-      "retrieved_doc_ids": [
-        "ctenophora-1",
-        "ctenophora-3",
-        "jacksonville-florida-0",
-        "ctenophora-2",
-        "prime-number-5",
-        "immune-system-0",
-        "ctenophora-0",
-        "force-3",
-        "warsaw-2",
-        "rhine-4"
-      ],
-      "recall_at_k": {
-        "1": 1.0,
-        "5": 1.0,
-        "10": 1.0
-      },
-      "reciprocal_rank": 1.0
-    },
-    {
       "record_id": "sq-571a4ead10f8ca1400304fdd",
       "relevant_doc_ids": [
         "oxygen-5"
       ],
       "retrieved_doc_ids": [
         "oxygen-5",
-        "fresno-california-0",
-        "oxygen-1",
-        "intergovernmental-panel-on-climate-chang-1",
+        "packet-switching-2",
+        "university-of-chicago-3",
+        "university-of-chicago-5",
+        "oxygen-7",
         "steam-engine-2",
-        "huguenot-2",
-        "construction-0",
-        "normans-3",
-        "force-3",
-        "huguenot-1"
+        "black-death-2",
+        "oxygen-4",
+        "harvard-university-2",
+        "packet-switching-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3043,15 +3043,15 @@
       ],
       "retrieved_doc_ids": [
         "normans-1",
-        "black-death-2",
-        "ctenophora-3",
-        "scottish-parliament-0",
-        "black-death-0",
-        "warsaw-2",
-        "steam-engine-4",
-        "university-of-chicago-4",
-        "oxygen-1",
-        "black-death-1"
+        "huguenot-2",
+        "normans-2",
+        "normans-3",
+        "french-and-indian-war-1",
+        "french-and-indian-war-4",
+        "imperialism-0",
+        "huguenot-1",
+        "french-and-indian-war-0",
+        "french-and-indian-war-6"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3066,23 +3066,23 @@
         "computational-complexity-theory-1"
       ],
       "retrieved_doc_ids": [
-        "computational-complexity-theory-1",
-        "computational-complexity-theory-3",
-        "southern-california-2",
-        "construction-1",
-        "force-3",
-        "computational-complexity-theory-4",
         "computational-complexity-theory-2",
-        "fresno-california-1",
-        "steam-engine-4",
-        "intergovernmental-panel-on-climate-chang-0"
+        "computational-complexity-theory-1",
+        "prime-number-4",
+        "steam-engine-2",
+        "computational-complexity-theory-0",
+        "computational-complexity-theory-3",
+        "force-2",
+        "prime-number-0",
+        "prime-number-1",
+        "packet-switching-3"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-57105da9a58dae1900cd699e",
@@ -3090,16 +3090,16 @@
         "huguenot-0"
       ],
       "retrieved_doc_ids": [
-        "normans-1",
-        "huguenot-0",
         "huguenot-1",
+        "huguenot-0",
         "french-and-indian-war-4",
-        "southern-california-2",
-        "steam-engine-4",
-        "pharmacy-2",
-        "fresno-california-2",
-        "warsaw-7",
-        "jacksonville-florida-0"
+        "huguenot-2",
+        "normans-1",
+        "rhine-5",
+        "rhine-1",
+        "french-and-indian-war-1",
+        "jacksonville-florida-0",
+        "french-and-indian-war-3"
       ],
       "recall_at_k": {
         "1": 0.0,
@@ -3115,15 +3115,15 @@
       ],
       "retrieved_doc_ids": [
         "ctenophora-3",
-        "european-union-law-3",
-        "french-and-indian-war-0",
-        "oxygen-4",
-        "economic-inequality-1",
-        "warsaw-2",
-        "prime-number-6",
-        "harvard-university-1",
-        "civil-disobedience-0",
-        "normans-1"
+        "ctenophora-4",
+        "ctenophora-2",
+        "amazon-rainforest-2",
+        "geology-3",
+        "geology-1",
+        "black-death-0",
+        "prime-number-3",
+        "black-death-2",
+        "amazon-rainforest-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3138,23 +3138,23 @@
         "1973-oil-crisis-1"
       ],
       "retrieved_doc_ids": [
+        "1973-oil-crisis-2",
         "1973-oil-crisis-1",
         "economic-inequality-1",
-        "university-of-chicago-5",
-        "1973-oil-crisis-0",
+        "economic-inequality-3",
+        "black-death-0",
         "intergovernmental-panel-on-climate-chang-2",
-        "university-of-chicago-4",
-        "computational-complexity-theory-2",
-        "islamism-1",
-        "imperialism-0",
-        "jacksonville-florida-0"
+        "warsaw-1",
+        "oxygen-9",
+        "yuan-dynasty-0",
+        "imperialism-0"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-571cb27fdd7acb1400e4c132",
@@ -3164,14 +3164,14 @@
       "retrieved_doc_ids": [
         "oxygen-3",
         "oxygen-7",
-        "huguenot-2",
-        "oxygen-0",
-        "oxygen-9",
         "oxygen-2",
-        "oxygen-6",
-        "warsaw-7",
         "oxygen-8",
-        "amazon-rainforest-2"
+        "computational-complexity-theory-2",
+        "oxygen-9",
+        "ctenophora-0",
+        "oxygen-6",
+        "ctenophora-4",
+        "immune-system-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3188,14 +3188,14 @@
       "retrieved_doc_ids": [
         "oxygen-4",
         "oxygen-5",
-        "black-death-2",
         "oxygen-1",
-        "french-and-indian-war-5",
-        "prime-number-6",
-        "steam-engine-2",
         "oxygen-6",
-        "islamism-0",
-        "university-of-chicago-5"
+        "university-of-chicago-5",
+        "force-3",
+        "force-0",
+        "intergovernmental-panel-on-climate-chang-2",
+        "black-death-2",
+        "ctenophora-4"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3212,14 +3212,14 @@
       "retrieved_doc_ids": [
         "victoria-australia-0",
         "european-union-law-2",
-        "immune-system-2",
-        "victoria-australia-1",
-        "immune-system-3",
-        "warsaw-7",
-        "private-school-1",
         "european-union-law-3",
+        "scottish-parliament-2",
+        "scottish-parliament-1",
+        "scottish-parliament-0",
         "private-school-3",
-        "intergovernmental-panel-on-climate-chang-1"
+        "french-and-indian-war-6",
+        "european-union-law-1",
+        "victoria-australia-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3234,23 +3234,23 @@
         "private-school-0"
       ],
       "retrieved_doc_ids": [
-        "private-school-0",
-        "private-school-1",
         "victoria-australia-1",
         "private-school-3",
-        "private-school-2",
+        "private-school-1",
         "private-school-5",
         "private-school-4",
-        "university-of-chicago-2",
-        "ctenophora-1",
-        "construction-1"
+        "private-school-0",
+        "private-school-2",
+        "scottish-parliament-2",
+        "economic-inequality-0",
+        "european-union-law-3"
       ],
       "recall_at_k": {
-        "1": 1.0,
-        "5": 1.0,
+        "1": 0.0,
+        "5": 0.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.16666666666666666
     },
     {
       "record_id": "sq-5727d88b4b864d1900163e5e",
@@ -3259,15 +3259,15 @@
       ],
       "retrieved_doc_ids": [
         "harvard-university-0",
-        "harvard-university-1",
+        "university-of-chicago-2",
         "private-school-0",
-        "immune-system-3",
-        "prime-number-3",
-        "force-3",
-        "amazon-rainforest-2",
-        "university-of-chicago-5",
         "private-school-4",
-        "computational-complexity-theory-2"
+        "victoria-australia-1",
+        "computational-complexity-theory-2",
+        "university-of-chicago-5",
+        "scottish-parliament-2",
+        "private-school-3",
+        "private-school-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3283,15 +3283,15 @@
       ],
       "retrieved_doc_ids": [
         "geology-3",
-        "force-3",
-        "steam-engine-0",
+        "economic-inequality-2",
+        "amazon-rainforest-1",
         "construction-0",
-        "fresno-california-1",
-        "oxygen-6",
-        "oxygen-1",
-        "university-of-chicago-3",
-        "fresno-california-3",
-        "intergovernmental-panel-on-climate-chang-1"
+        "intergovernmental-panel-on-climate-chang-1",
+        "warsaw-7",
+        "private-school-4",
+        "economic-inequality-1",
+        "prime-number-2",
+        "sky-united-kingdom-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3308,14 +3308,14 @@
       "retrieved_doc_ids": [
         "european-union-law-0",
         "european-union-law-3",
-        "force-3",
-        "black-death-1",
-        "sky-united-kingdom-2",
-        "packet-switching-3",
-        "construction-0",
-        "fresno-california-2",
-        "civil-disobedience-0",
-        "pharmacy-0"
+        "scottish-parliament-2",
+        "rhine-2",
+        "oxygen-8",
+        "rhine-1",
+        "european-union-law-1",
+        "huguenot-0",
+        "rhine-5",
+        "european-union-law-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3330,23 +3330,23 @@
         "oxygen-8"
       ],
       "retrieved_doc_ids": [
-        "oxygen-8",
-        "oxygen-3",
-        "rhine-4",
-        "steam-engine-1",
-        "ctenophora-3",
-        "immune-system-3",
-        "economic-inequality-2",
         "oxygen-7",
+        "oxygen-8",
+        "oxygen-2",
+        "steam-engine-1",
+        "oxygen-0",
+        "oxygen-3",
+        "computational-complexity-theory-2",
+        "steam-engine-3",
         "oxygen-4",
-        "steam-engine-3"
+        "oxygen-6"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-56e1bd4acd28a01900c67afc",
@@ -3355,15 +3355,15 @@
       ],
       "retrieved_doc_ids": [
         "computational-complexity-theory-0",
-        "victoria-australia-0",
-        "oxygen-3",
-        "rhine-3",
-        "european-union-law-3",
-        "southern-california-1",
-        "rhine-5",
-        "rhine-0",
         "force-3",
-        "immune-system-0"
+        "geology-2",
+        "oxygen-9",
+        "construction-0",
+        "steam-engine-2",
+        "packet-switching-3",
+        "warsaw-5",
+        "scottish-parliament-1",
+        "prime-number-2"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3379,15 +3379,15 @@
       ],
       "retrieved_doc_ids": [
         "steam-engine-1",
-        "steam-engine-2",
         "steam-engine-3",
-        "european-union-law-1",
+        "steam-engine-2",
+        "oxygen-0",
+        "oxygen-6",
         "steam-engine-0",
-        "intergovernmental-panel-on-climate-chang-1",
-        "force-3",
-        "fresno-california-2",
-        "pharmacy-1",
-        "european-union-law-2"
+        "oxygen-2",
+        "oxygen-8",
+        "oxygen-9",
+        "oxygen-7"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3403,15 +3403,15 @@
       ],
       "retrieved_doc_ids": [
         "1973-oil-crisis-0",
-        "ctenophora-4",
-        "fresno-california-0",
+        "steam-engine-2",
         "1973-oil-crisis-1",
-        "computational-complexity-theory-2",
+        "steam-engine-4",
+        "amazon-rainforest-1",
+        "oxygen-2",
         "steam-engine-3",
-        "warsaw-1",
+        "fresno-california-3",
         "oxygen-6",
-        "islamism-1",
-        "oxygen-2"
+        "steam-engine-0"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3426,23 +3426,23 @@
         "intergovernmental-panel-on-climate-chang-1"
       ],
       "retrieved_doc_ids": [
-        "intergovernmental-panel-on-climate-chang-1",
         "intergovernmental-panel-on-climate-chang-0",
+        "intergovernmental-panel-on-climate-chang-1",
         "intergovernmental-panel-on-climate-chang-2",
-        "prime-number-0",
+        "computational-complexity-theory-3",
         "packet-switching-2",
-        "warsaw-4",
-        "jacksonville-florida-0",
+        "packet-switching-0",
+        "computational-complexity-theory-2",
+        "pharmacy-1",
         "immune-system-2",
-        "university-of-chicago-4",
-        "european-union-law-1"
+        "packet-switching-3"
       ],
       "recall_at_k": {
-        "1": 1.0,
+        "1": 0.0,
         "5": 1.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.5
     },
     {
       "record_id": "sq-57286010ff5b5019007da1ca",
@@ -3451,15 +3451,15 @@
       ],
       "retrieved_doc_ids": [
         "university-of-chicago-5",
-        "islamism-0",
-        "jacksonville-florida-0",
-        "harvard-university-1",
-        "oxygen-4",
-        "university-of-chicago-4",
-        "southern-california-2",
-        "huguenot-2",
+        "economic-inequality-1",
+        "economic-inequality-3",
+        "economic-inequality-2",
         "university-of-chicago-0",
-        "warsaw-0"
+        "university-of-chicago-4",
+        "private-school-0",
+        "scottish-parliament-2",
+        "private-school-3",
+        "private-school-4"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3476,14 +3476,14 @@
       "retrieved_doc_ids": [
         "private-school-1",
         "victoria-australia-1",
-        "private-school-3",
         "private-school-5",
-        "private-school-0",
+        "private-school-3",
         "private-school-4",
+        "private-school-0",
         "private-school-2",
-        "jacksonville-florida-0",
-        "prime-number-5",
-        "immune-system-0"
+        "rhine-1",
+        "university-of-chicago-2",
+        "warsaw-6"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3500,14 +3500,14 @@
       "retrieved_doc_ids": [
         "steam-engine-4",
         "steam-engine-2",
-        "oxygen-3",
-        "amazon-rainforest-1",
-        "sky-united-kingdom-1",
-        "pharmacy-0",
+        "steam-engine-3",
         "steam-engine-1",
-        "yuan-dynasty-3",
-        "french-and-indian-war-5",
-        "warsaw-7"
+        "steam-engine-0",
+        "oxygen-3",
+        "oxygen-2",
+        "oxygen-6",
+        "construction-0",
+        "oxygen-9"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3523,15 +3523,15 @@
       ],
       "retrieved_doc_ids": [
         "southern-california-2",
-        "prime-number-0",
-        "construction-1",
-        "amazon-rainforest-2",
-        "jacksonville-florida-0",
-        "scottish-parliament-1",
-        "warsaw-6",
         "construction-0",
-        "fresno-california-1",
-        "black-death-0"
+        "steam-engine-2",
+        "force-2",
+        "force-3",
+        "victoria-australia-0",
+        "prime-number-4",
+        "packet-switching-3",
+        "scottish-parliament-2",
+        "fresno-california-1"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3547,15 +3547,15 @@
       ],
       "retrieved_doc_ids": [
         "private-school-4",
-        "european-union-law-0",
-        "european-union-law-3",
         "private-school-3",
-        "pharmacy-3",
-        "jacksonville-florida-0",
-        "pharmacy-1",
+        "european-union-law-3",
+        "private-school-1",
+        "european-union-law-0",
+        "civil-disobedience-1",
+        "european-union-law-1",
+        "victoria-australia-1",
         "private-school-5",
-        "geology-1",
-        "european-union-law-1"
+        "pharmacy-3"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3571,15 +3571,15 @@
       ],
       "retrieved_doc_ids": [
         "imperialism-0",
+        "imperialism-1",
         "rhine-5",
-        "french-and-indian-war-5",
-        "university-of-chicago-4",
-        "southern-california-1",
-        "huguenot-2",
-        "black-death-2",
-        "oxygen-1",
         "scottish-parliament-0",
-        "intergovernmental-panel-on-climate-chang-2"
+        "french-and-indian-war-0",
+        "normans-1",
+        "french-and-indian-war-4",
+        "sky-united-kingdom-1",
+        "normans-2",
+        "french-and-indian-war-7"
       ],
       "recall_at_k": {
         "1": 1.0,
@@ -3594,23 +3594,23 @@
         "economic-inequality-1"
       ],
       "retrieved_doc_ids": [
-        "economic-inequality-1",
-        "force-3",
-        "fresno-california-2",
-        "pharmacy-1",
+        "yuan-dynasty-3",
+        "harvard-university-2",
+        "university-of-chicago-0",
+        "university-of-chicago-3",
         "jacksonville-florida-0",
-        "huguenot-2",
-        "prime-number-1",
-        "french-and-indian-war-5",
-        "southern-california-1",
-        "civil-disobedience-0"
+        "islamism-0",
+        "economic-inequality-1",
+        "normans-3",
+        "pharmacy-2",
+        "pharmacy-5"
       ],
       "recall_at_k": {
-        "1": 1.0,
-        "5": 1.0,
+        "1": 0.0,
+        "5": 0.0,
         "10": 1.0
       },
-      "reciprocal_rank": 1.0
+      "reciprocal_rank": 0.14285714285714285
     }
   ]
 }
